@@ -1,0 +1,1658 @@
+
+
+   body {
+    margin: 0; 
+    font-family: Arial, sans-serif; 
+    background-color:#DDAF46; 
+}
+
+
+header {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-section {
+    position: relative; 
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.carousel-container {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    filter: brightness(0.5); 
+}
+
+.hero-text {
+    position: relative; 
+    z-index: 2; 
+    text-align: center;
+    color: rgb(255, 255, 255); 
+    padding: 20px;
+}
+
+.hero-text h1{
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); 
+    margin: 0;
+    font-size: 4em;
+}
+.hero-text p{
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); 
+    margin: 0;
+    font-size: 1.5em;
+
+    }
+
+.Categoria {
+    background-color:#DDAF46; 
+    padding-top: 50px; 
+    padding-bottom: 50px; 
+    margin-top: 0; 
+    width: 100%;
+    box-sizing: border-box;
+}
+.video.inicio main {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 15px;
+
+
+}
+#searchInput{
+  padding: 10px;
+  width: 60%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+ border-radius: 5px;
+ font-size: 1em;
+}
+#searchButton{
+  padding: 10px 20px;
+  background-color: #be0d0d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+
+}
+#searchButton:hover{
+  background-color: hsl(64, 100%, 54%);
+}
+
+
+
+.logo img{ /* imagen de logo*/
+  height: 65px;
+  width: 70px;
+  margin-right: 10px;
+  
+   
+}
+
+nav{
+  display: flex;
+  justify-content: flex-end;/* mueve el menu a la derecha*/
+  
+
+
+}
+
+.links{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  text-align: right;
+}
+
+.links li{
+  margin-right: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  
+
+}
+
+.links a { /* letra menú*/
+  color: white;
+  text-decoration: none;
+
+  }
+  .links a:hover{/* color al mantener presionado los links del menú*/
+    color: rgb(255, 217, 0);
+    text-shadow: 0 0 10px; /* brillo medio */
+
+
+  
+
+  }
+
+
+.sección{ /* sección blanca*/
+  background-color: black; 
+  padding: 40px 0; 
+  
+    
+    text-align: center;
+  
+
+    
+}
+
+.Categoria{/* Espacio que cubre la sección blanca*/
+  margin: 0;
+  padding: 0;
+   width: 100%;
+
+}
+  .sección h2{ /* Titulo comida "categoria"*/
+      font-size: 3em;
+      margin-bottom: 39px;
+      color: white;
+
+    
+  }
+
+/*Sección recetas postres*/
+
+.receta-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+   
+
+}
+.receta{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+ gap: 5px;
+  
+
+}
+.espaciado{
+  padding: 10px;
+}
+.contenido{
+  font-size: 22px;
+     background-color: #fcf2ef;
+     border: 2px solid #630707;
+    border-radius: 10px;
+    padding: 20px;
+    margin:30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(220, 220, 220, 0.3);
+}
+.contenido p{
+  font-size: 18px;
+  color: black;
+  text-align: left;
+}
+    .contenido:hover {
+      box-shadow: 0 8px 16px rgba(189, 3, 3, 0.726);
+      transform: translate(-5px);      
+      border-color: rgb(190, 12, 12)5, 0, 0;  
+       
+
+    }
+
+
+    .imagen-receta{
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .interactividad { /*Estilos del contenedor de interaccción*/
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      margin-bottom: 10px;
+      border-top: 1px solid #eee;
+      border-bottom: 10px;
+      
+    }
+
+      .like-data-receta-id{ /*estilo del boton me gusta*/
+
+      cursor: pointer;
+      color: #888;
+      font-size: 1.1em;
+      transition: color 0,2s;
+      display: flex;
+      align-items: center;
+    }
+    .manito{ /*estilo para la manito*/
+      margin-right: 5px;
+    }
+.like-data-receta-id.activo{  /*estilo que se activa con JS */
+  color: rgb(27, 26, 4);
+  font-weight: bold;
+}
+.rating i.estrellas{
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: 0.2s;
+}
+
+.rating i.far.fa-star{
+  color: #ccc; /* color gris por defecto*/
+  }
+
+.rating i.fas.fa-star{ /* color amarillo al seleccionar las estrellas*/
+
+  color: gold;
+  
+}
+
+    .boton-receta{
+      display: block;
+      background-color: rgb(179, 27, 27);
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin: 15px auto 0 auto;
+      display: inline-block;
+    }
+    .boton-receta:hover {
+      background-color: rgb(240, 170, 21);
+    }
+
+
+.modal{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+
+}
+
+.modal-contenido{
+  
+  background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+.cerrar{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+
+}
+.ingredientes, .preparacion{
+  text-align: center;
+}
+.ingredientes h3, .preparacion h3{
+  color: #e74c3c;
+  border-bottom: 2px solid #e74c3c;
+  padding-bottom: 5px;
+}
+.ingredientes ul, .preparacion ol{
+  padding-left: 20px;
+
+}
+.ingredientes li, .preparacion li{
+  margin-bottom: 8px;
+  line-height: 1.5;
+text-align: left;
+}
+
+.img-modal {
+  width: 100%;
+  max-width: 300px; /* puedes ajustar el tamaño */
+  display: block;
+  margin: 30px auto 10px auto;;
+  border-radius: 10px;
+}
+
+
+.modal2{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+  .modal-contenido2{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar2{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar2:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta2{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+
+}
+.ingredientes, .preparacion{
+  text-align: center;
+}
+.ingredientes h3, .preparacion h3{
+  color: #e74c3c;
+  border-bottom: 2px solid #e74c3c;
+  padding-bottom: 5px;
+}
+.ingredientes ul, .preparacion ol{
+  padding-left: 20px;
+
+}
+.ingredientes li, .preparacion li{
+  margin-bottom: 8px;
+  line-height: 1.5;
+text-align: left;
+
+
+}
+.modal3{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido3{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar3{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+   z-index: 10; /* Asegúrate que esté arriba del botón */
+}
+
+.cerrar3:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta3{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+
+}
+.receta-info3{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+.modal4{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido4{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar4{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar4:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta4{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info4{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+.modal5{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido5{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar5{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar5:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta5{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info5{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+.modal6{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido6{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar6{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar6:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta6{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info6{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+.modal7{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido7{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar7{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar7:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta7{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info7{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+.modal8{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido8{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar8{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar8:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta8{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info8{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+.modal9{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido9{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar9{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar9:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta9{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info9{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+.modal10{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido10{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar10{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar10:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta10{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info10{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+.modal11{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido11{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar11{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar11:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta11{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info11{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+.modal12{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido12{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar12{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar12:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta12{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info12{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+.modal13{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido13{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar13{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar13:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta13{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info13{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+.modal14{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido14{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar14{
+    border: 4px solid rgb(255, 38, 0);
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar14:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta14{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info14{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.modal15{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido15{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar15{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar15:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta15{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info15{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.modal16{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido16{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar16{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar16:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta16{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info16{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+
+}
+.modal17{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido17{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar17{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar17:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta17{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+}
+.receta-info17{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+  text-align: center;
+}
+.modal18{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido18{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar18{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar18:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta18{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+}
+.receta-info18{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.modal19{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido19{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar19{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar19:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta19{
+  text-align: center;
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info19{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+
+}
+
+.modal20{
+  border: 4px solid rgb(255, 38, 0);
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido20{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar20{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.cerrar20:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta20{
+  text-align: center;
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info20{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.modal21{
+  border: 4px solid rgb(255, 38, 0); 
+  display:none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+  .modal-contenido21{
+    background-color: white;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 900px;
+  height: 500px;
+  overflow-y: auto;
+  position: relative;
+  animation: slideIn 0.3s;
+animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+@keyframes animatetop{
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+
+  }
+  .cerrar21{
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+   z-index: 10; /* Asegúrate que esté arriba del botón */
+}
+
+.cerrar21:hover{
+  text-decoration: none;
+color: #000;
+cursor: pointer;
+}
+.titulo-receta21{
+color:#000;
+text-decoration: none;
+cursor: pointer;
+text-align: center;
+}
+.receta-info21{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+.btn-ver-receta{
+   display: block;
+      background-color: rgb(179, 27, 27);
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin: 15px auto 0 auto;
+      display: inline-block;
+}
+.btn-ver-receta:hover{
+  background-color: rgb(240, 170, 21);
+}
+
+.print-button {
+  background-color: #ff6347; /* Color del botón */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  align-items: center;
+}
+
+.print-button:hover {
+  background-color: #e5533d; /* Color al pasar el mouse */
+}
+
+
+footer{ /* pie de pagina*/
+  background-color: black;
+  height: 200px;;
+  color: aliceblue;
+  display: flex;
+ justify-content: center;
+ align-items: center;
+
+  
+}
+
+footer.p{
+  font-size: 3em;
+}
+ 

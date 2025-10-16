@@ -1,0 +1,209 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVBAR */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding: 10px 20px;
+  color: white;
+}
+
+.Nombre-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* 🔍 Buscador */
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.search-form input {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.search-form button {
+  margin-left: 10px;
+  padding: 6px 12px;
+  border: none;
+  background: #ff6600;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background: #cc5200;
+}
+
+/* ☰ Menú desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #ff6600;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 140px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* 🔑 Botón de iniciar sesión */
+.btn-login {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  background-color: #ff6600;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.btn-login:hover {
+  background-color: #cc5200;
+}
+
+/* 🟠 Banner */
+.baner1 {
+  background-color: rgb(204, 57, 12);
+  height: 300px;
+  color: white;
+  text-align: center;
+}
+
+.position-text {
+  padding-top: 100px;
+}
+
+/* 🧑‍🍳 Recetas */
+.container-Recetas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.recetas-destacadas {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(220, 220, 220, 0.3);
+  transition: 0.3s;
+}
+
+.recetas-destacadas:hover {
+  transform: translateY(-5px);
+  border-color: blue;
+}
+
+.recetas-destacadas img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* 📄 Modal Login */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 700px;
+}
+
+.cerrar {
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Footer */
+.container-footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.login-container {
+background-color: white;
+color: #333;
+padding: 20px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+font-family: Arial, sans-serif;
+}
+
+.login-container input {
+display: block;
+width: 100%;
+padding: 10px;
+margin-bottom: 10px;
+border: 2px solid #ff8c00;
+border-radius: 3px;
+}
+
+.login-container button {
+background-color: #ff8c00;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 3px;
+cursor: pointer;
+}
+
+.login-container button:hover {
+background-color: #ffa500;
+}
+

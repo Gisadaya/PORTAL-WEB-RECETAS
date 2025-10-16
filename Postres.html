@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="logo">
+      <img src="imagenes/Logo.jpg.png" alt="Logo">
+    </div>
+
+    <nav>
+      <ul class="links">
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="platillos.sv.html">Platillos</a></li>
+        <li><a href="Postres.html">Postres</a></li>
+        <li><a href="Bebidas.html">Bebidas</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="Agregar-receta.html">Agregar receta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- CARRUSEL DE FONDO -->
+  <div class="hero-section">
+        <div class="carousel-container">
+            <div class="carousel-slide fade"><img src="imagenes/canoas.carrusel.png" alt="Postre 1"></div>
+      <div class="carousel-slide fade"><img src="imagenes/alboroto.carrusel.jpg" alt="Postre 2"></div>
+      <div class="carousel-slide fade"><img src="imagenes/poleada.carrusel.png" alt="Postre 3"></div>
+      <div class="carousel-slide fade"><img src="imagenes/empanadas.carrusel.png" alt="Postre 4"></div>
+      <div class="carousel-slide fade"><img src="imagenes/quesadilla.carrusel.png" alt="Postre 5"></div>
+      <div class="carousel-slide fade"><img src="imagenes/jocotes.carrusel.png" alt="Postre 6"></div>
+    </div>
+
+        <div class="hero-text">
+      <h1>Sección de postres</h1>
+      <p>Recetas sencillas, resultados deliciosos.</p>
+    </div>
+  </div>
+          <main class="Categoria">
+          <section class="sección">
+            <h2>Postres</h2>
+            <div class="recipiente" id="Contenedor-postres"></div>
+          </section>
+        </main>
+</div>
+
+
+        <div class="receta">
+          <!-- EMPANADAS -->
+          <div class="contenido">
+            <div class="espaciado">
+              <span class="boton-cerrar"></span>
+              <h3 id="Titulo-modal">Empanadas</h3>
+              <img src="imagenes/empanadas.jpg" alt="Imagen de Empanadas" class="imagen-receta">
+              <p>Hechas de masa de plátano maduro rellena de poleada o frijoles que se fríe y se sirve llena de azúcar.</p>
+              <p><b>Categoría:</b> Postres</p>
+              <p><b>Tipo:</b> Antojo tradicional elaborado con plátano</p>
+              <p><b>Tiempo de preparación:</b> 30 minutos</p>
+
+              <div class="interactividad">
+                <div class="like" data-receta-id="Empanadas">
+                  <i class="far fa-thumbs-up like-icon"></i>
+                  <span class="manito">0</span>
+                </div>
+
+                <div class="rating">
+                  <i class="far fa-star estrellas" data-valor="1"></i>
+                  <i class="far fa-star estrellas" data-valor="2"></i>
+                  <i class="far fa-star estrellas" data-valor="3"></i>
+                  <i class="far fa-star estrellas" data-valor="4"></i>
+                  <i class="far fa-star estrellas" data-valor="5"></i>
+                </div>
+              </div>
+
+              <button class="btn-ver-receta" onclick="Abrirmodal('receta-empanadas')">Ver receta</button>
+
+              
+            </div>
+          </div>
+
+          <!-- NUEGADOS -->
+          <div class="contenido">
+            <div class="espaciado">
+              <span class="boton-cerrar"></span>
+              <h3 id="Titulo-modal">Nuegados</h3>
+              <img src="imagenes/nuegados.jpg" alt="Imagen de Nuegados" class="imagen-receta">
+              <p>Elaborado a base de masa de yuca, que se fríe hasta quedar crujiente y se acompaña con miel.</p>
+              <p><b>Categoría:</b> Postres</p>
+              <p><b>Tipo:</b> Dulce frito tradicional</p>
+              <p><b>Tiempo de preparación:</b> entre 40 y 50 minutos</p>
+
+              <div class="interactividad">
+                <div class="like" data-receta-id="Nuegados">
+                  <i class="far fa-thumbs-up like-icon"></i>
+                  <span class="manito">0</span>
+                </div>
+
+                <div class="rating">
+                  <i class="far fa-star estrellas" data-valor="1"></i>
+                  <i class="far fa-star estrellas" data-valor="2"></i>
+                  <i class="far fa-star estrellas" data-valor="3"></i>
+                  <i class="far fa-star estrellas" data-valor="4"></i>
+                  <i class="far fa-star estrellas" data-valor="5"></i>
+                </div>
+              </div>
+
+              <button class="btn-ver-receta" onclick="Abrirmodal2('receta-nuegados')">Ver receta</button>
+            </div>
+          </div>
+
+          <!-- JOCOTE EN MIEL -->
+          <div class="contenido">
+            <div class="espaciado">
+              <span class="boton-cerrar"></span>
+              <h3 id="Titulo-modal">Jocote en miel</h3>
+              <img src="imagenes/Jocote en miel.jpg" alt="Imagen de Jocote en miel" class="imagen-receta">
+              <p>Preparado con jocote cocido en miel, obteniendo un sabor dulce y aromático.</p>
+              <p><b>Categoría:</b> Postres</p>
+              <p><b>Tipo:</b> Dulce en almíbar</p>
+              <p><b>Tiempo de preparación:</b> 1 hora</p>
+
+              <div class="interactividad">
+                <div class="like" data-receta-id="Jocote en miel">
+                  <i class="far fa-thumbs-up like-icon"></i>
+                  <span class="manito">0</span>
+                </div>
+
+                <div class="rating">
+                  <i class="far fa-star estrellas" data-valor="1"></i>
+                  <i class="far fa-star estrellas" data-valor="2"></i>
+                  <i class="far fa-star estrellas" data-valor="3"></i>
+                  <i class="far fa-star estrellas" data-valor="4"></i>
+                  <i class="far fa-star estrellas" data-valor="5"></i>
+                </div>
+              </div>
+
+              <button class="btn-ver-receta" onclick="Abrirmodal3('receta-Jocote en miel')">Ver receta</button>
+            </div>
+          </div>
+           <div class="contenido">
+            <div class="espaciado">
+              <span class="boton-cerrar"></span>
+              <h3 id="Titulo-modal">Torrejas</h3>
+              <img src="imagenes/Torrejas.jpg" alt="Imagen de Jocote en miel" class="imagen-receta">
+              <p>Preparado con jocote cocido en miel, obteniendo un sabor dulce y aromático.</p>
+              <p><b>Categoría:</b> Postres</p>
+              <p><b>Tipo:</b> Dulce en almíbar</p>
+              <p><b>Tiempo de preparación:</b> 1 hora</p>
+
+              <div class="interactividad">
+                <div class="like" data-receta-id="Jocote en miel">
+                  <i class="far fa-thumbs-up like-icon"></i>
+                  <span class="manito">0</span>
+                </div>
+
+                <div class="rating">
+                  <i class="far fa-star estrellas" data-valor="1"></i>
+                  <i class="far fa-star estrellas" data-valor="2"></i>
+                  <i class="far fa-star estrellas" data-valor="3"></i>
+                  <i class="far fa-star estrellas" data-valor="4"></i>
+                  <i class="far fa-star estrellas" data-valor="5"></i>
+                </div>
+              </div>
+
+               <button class="btn-ver-receta" onclick="Abrirmodal4('receta-torrejas')">Ver receta</button>
+            </div>
+          </div>
+           <div class="contenido">
+            <div class="espaciado">
+              <span class="boton-cerrar"></span>
+              <h3 id="Titulo-modal">Quesadillas</h3>
+              <img src="imagenes/Quesadilla.jpg" alt="Imagen de quesadillas" class="imagen-receta">
+              <p>Preparado con jocote cocido en miel, obteniendo un sabor dulce y aromático.</p>
+              <p><b>Categoría:</b> Postres</p>
+              <p><b>Tipo:</b> Dulce en almíbar</p>
+              <p><b>Tiempo de preparación:</b> 1 hora</p>
+
+              <div class="interactividad">
+                <div class="like" data-receta-id="quesadilla">
+                  <i class="far fa-thumbs-up like-icon"></i>
+                  <span class="manito">0</span>
+                </div>
+
+                <div class="rating">
+                  <i class="far fa-star estrellas" data-valor="1"></i>
+                  <i class="far fa-star estrellas" data-valor="2"></i>
+                  <i class="far fa-star estrellas" data-valor="3"></i>
+                  <i class="far fa-star estrellas" data-valor="4"></i>
+                  <i class="far fa-star estrellas" data-valor="5"></i>
+                </div>
+              </div>
+
+              <button class="btn-ver-receta" onclick="Abrirmodal5('receta-quesadilla')">Ver receta</button>
+            </div>
+          </div>
+           <div class="contenido">
+            <div class="espaciado">
+              <span class="boton-cerrar"></span>
+              <h3 id="Titulo-modal">Marquesote</h3>
+              <img src="imagenes/Marquesote.jpg" alt="Imagen de marquesote" class="imagen-receta">
+              <p>Preparado con jocote cocido en miel, obteniendo un sabor dulce y aromático.</p>
+              <p><b>Categoría:</b> Postres</p>
+              <p><b>Tipo:</b> Dulce en almíbar</p>
+              <p><b>Tiempo de preparación:</b> 1 hora</p>
+
+              <div class="interactividad">
+                <div class="like" data-receta-id="marquesote">
+                  <i class="far fa-thumbs-up like-icon"></i>
+                  <span class="manito">0</span>
+                </div>
+
+                <div class="rating">
+                  <i class="far fa-star estrellas" data-valor="1"></i>
+                  <i class="far fa-star estrellas" data-valor="2"></i>
+                  <i class="far fa-star estrellas" data-valor="3"></i>
+                  <i class="far fa-star estrellas" data-valor="4"></i>
+                  <i class="far fa-star estrellas" data-valor="5"></i>
+                </div>
+              </div>
+
+               <button class="btn-ver-receta" onclick="Abrirmodal6('receta-marquesote')">Ver receta</button>
+            </div>
+          </div>
+          <div class="contenido">
+            <div class="espaciado">
+              <span class="boton-cerrar"></span>
+              <h3 id="Titulo-modal">Canoas</h3>
+              <img src="imagenes/canoas.jpg" alt="Imagen de canoas" class="imagen-receta">
+              <p>Preparado con jocote cocido en miel, obteniendo un sabor dulce y aromático.</p>
+              <p><b>Categoría:</b> Postres</p>
+              <p><b>Tipo:</b> Dulce en almíbar</p>
+              <p><b>Tiempo de preparación:</b> 1 hora</p>
+
+              <div class="interactividad">
+                <div class="like" data-receta-id="canoas">
+                  <i class="far fa-thumbs-up like-icon"></i>
+                  <span class="manito">0</span>
+                </div>
+
+                <div class="rating">
+                  <i class="far fa-star estrellas" data-valor="1"></i>
+                  <i class="far fa-star estrellas" data-valor="2"></i>
+                  <i class="far fa-star estrellas" data-valor="3"></i>
+                  <i class="far fa-star estrellas" data-valor="4"></i>
+                  <i class="far fa-star estrellas" data-valor="5"></i>
+                </div>
+              </div>
+
+               <button class="btn-ver-receta" onclick="Abrirmodal7('receta-canoas')">Ver receta</button>
+            </div>
+          </div>
+          <div class="contenido">
+            <div class="espaciado">
+              <span class="boton-cerrar"></span>
+              <h3 id="Titulo-modal">Poleada</h3>
+              <img src="imagenes/Poleada.jpg" alt="Imagen de poleada" class="imagen-receta">
+              <p>Preparado con jocote cocido en miel, obteniendo un sabor dulce y aromático.</p>
+              <p><b>Categoría:</b> Postres</p>
+              <p><b>Tipo:</b> Dulce en almíbar</p>
+              <p><b>Tiempo de preparación:</b> 1 hora</p>
+
+              <div class="interactividad">
+                <div class="like" data-receta-id="poleada">
+                  <i class="far fa-thumbs-up like-icon"></i>
+                  <span class="manito">0</span>
+                </div>
+
+                <div class="rating">
+                  <i class="far fa-star estrellas" data-valor="1"></i>
+                  <i class="far fa-star estrellas" data-valor="2"></i>
+                  <i class="far fa-star estrellas" data-valor="3"></i>
+                  <i class="far fa-star estrellas" data-valor="4"></i>
+                  <i class="far fa-star estrellas" data-valor="5"></i>
+                </div>
+              </div>
+
+               <button class="btn-ver-receta" onclick="Abrirmodal8('receta-poleada')">Ver receta</button>
+            </div>
+          </div>
+          <div class="contenido">
+            <div class="espaciado">
+              <span class="boton-cerrar"></span>
+              <h3 id="Titulo-modal">Arroz en leche</h3>
+              <img src="imagenes/Arroz en leche.jpg" alt="Imagen de arroz en leche" class="imagen-receta">
+              <p>Preparado con jocote cocido en miel, obteniendo un sabor dulce y aromático.</p>
+              <p><b>Categoría:</b> Postres</p>
+              <p><b>Tipo:</b> Dulce en almíbar</p>
+              <p><b>Tiempo de preparación:</b> 1 hora</p>
+
+              <div class="interactividad">
+                <div class="like" data-receta-id="arroz en leche">
+                  <i class="far fa-thumbs-up like-icon"></i>
+                  <span class="manito">0</span>
+                </div>
+
+                <div class="rating">
+                  <i class="far fa-star estrellas" data-valor="1"></i>
+                  <i class="far fa-star estrellas" data-valor="2"></i>
+                  <i class="far fa-star estrellas" data-valor="3"></i>
+                  <i class="far fa-star estrellas" data-valor="4"></i>
+                  <i class="far fa-star estrellas" data-valor="5"></i>
+                </div>
+              </div>
+
+               <button class="btn-ver-receta" onclick="Abrirmodal9('receta-arroz en leche')">Ver receta</button>
+            </div>
+          </div>
+          <div class="contenido">
+            <div class="espaciado">
+              <span class="boton-cerrar"></span>
+              <h3 id="Titulo-modal">Alboroto</h3>
+              <img src="imagenes/alboroto.jpg" alt="Imagen de alboroto" class="imagen-receta">
+              <p>Preparado con jocote cocido en miel, obteniendo un sabor dulce y aromático.</p>
+              <p><b>Categoría:</b> Postres</p>
+              <p><b>Tipo:</b> Dulce en almíbar</p>
+              <p><b>Tiempo de preparación:</b> 1 hora</p>
+
+              <div class="interactividad">
+                <div class="like" data-receta-id="alboroto">
+                  <i class="far fa-thumbs-up like-icon"></i>
+                  <span class="manito">0</span>
+                </div>
+
+                <div class="rating">
+                  <i class="far fa-star estrellas" data-valor="1"></i>
+                  <i class="far fa-star estrellas" data-valor="2"></i>
+                  <i class="far fa-star estrellas" data-valor="3"></i>
+                  <i class="far fa-star estrellas" data-valor="4"></i>
+                  <i class="far fa-star estrellas" data-valor="5"></i>
+                </div>
+              </div>
+
+               <button class="btn-ver-receta" onclick="Abrirmodal10('receta-alboroto')">Ver receta</button>
+            </div>
+          </div>
+          <div class="contenido">
+            <div class="espaciado">
+              <span class="boton-cerrar"></span>
+              <h3 id="Titulo-modal">Conserva</h3>
+              <img src="imagenes/conserva.jpg" alt="Imagen de conserva" class="imagen-receta">
+              <p>Preparado con jocote cocido en miel, obteniendo un sabor dulce y aromático.</p>
+              <p><b>Categoría:</b> Postres</p>
+              <p><b>Tipo:</b> Dulce en almíbar</p>
+              <p><b>Tiempo de preparación:</b> 1 hora</p>
+
+              <div class="interactividad">
+                <div class="like" data-receta-id="conserva">
+                  <i class="far fa-thumbs-up like-icon"></i>
+                  <span class="manito">0</span>
+                </div>
+
+                <div class="rating">
+                  <i class="far fa-star estrellas" data-valor="1"></i>
+                  <i class="far fa-star estrellas" data-valor="2"></i>
+                  <i class="far fa-star estrellas" data-valor="3"></i>
+                  <i class="far fa-star estrellas" data-valor="4"></i>
+                  <i class="far fa-star estrellas" data-valor="5"></i>
+                </div>
+              </div>
+
+               <button class="btn-ver-receta" onclick="Abrirmodal11('receta-conserva')">Ver receta</button>
+            </div>
+          </div>
+          <div class="contenido">
+            <div class="espaciado">
+              <span class="boton-cerrar"></span>
+              <h3 id="Titulo-modal">Dulce de leche</h3>
+              <img src="imagenes/dulce de leche.jpg" alt="Imagen de dulce de leche" class="imagen-receta">
+              <p>Preparado con jocote cocido en miel, obteniendo un sabor dulce y aromático.</p>
+              <p><b>Categoría:</b> Postres</p>
+              <p><b>Tipo:</b> Dulce en almíbar</p>
+              <p><b>Tiempo de preparación:</b> 1 hora</p>
+
+              <div class="interactividad">
+                <div class="like" data-receta-id="Dulce de leche">
+                  <i class="far fa-thumbs-up like-icon"></i>
+                  <span class="manito">0</span>
+                </div>
+
+                <div class="rating">
+                  <i class="far fa-star estrellas" data-valor="1"></i>
+                  <i class="far fa-star estrellas" data-valor="2"></i>
+                  <i class="far fa-star estrellas" data-valor="3"></i>
+                  <i class="far fa-star estrellas" data-valor="4"></i>
+                  <i class="far fa-star estrellas" data-valor="5"></i>
+                </div>
+              </div>
+
+               <button class="btn-ver-receta" onclick="Abrirmodal12('receta-Dulce de leche')">Ver receta</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer>
+    <p>&copy; 2025 Foodware. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- PANTALLA EMERGENTE -->
+  
+<div class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar">&times;</span>
+    <h2 class="titulo-receta">Título de receta</h2>
+
+    <div class="receta-info">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal2">
+  <div class="modal-contenido2">
+    <span class="cerrar2">&times;</span>
+    <h2 class="titulo-receta2">Título de receta</h2>
+
+    <div class="receta-info2">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal3">
+  <div class="modal-contenido3">
+    <span class="cerrar3">&times;</span>
+    <h2 class="titulo-receta3">Título de receta</h2>
+
+    <div class="receta-info3">
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal4">
+  <div class="modal-contenido4">
+    <span class="cerrar4">&times;</span>
+    <h2 class="titulo-receta4">Título de receta</h2>
+
+    <div class="receta-info4">
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal5">
+  <div class="modal-contenido5">
+    <span class="cerrar5">&times;</span>
+    <h2 class="titulo-receta5">Título de receta</h2>
+
+    <div class="receta-info5">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal6">
+  <div class="modal-contenido6">
+    <span class="cerrar6">&times;</span>
+    <h2 class="titulo-receta6">Título de receta</h2>
+
+    <div class="receta-info6">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal7">
+  <div class="modal-contenido7">
+    <span class="cerrar7">&times;</span>
+    <h2 class="titulo-receta7">Título de receta</h2>
+
+    <div class="receta-info7">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal8">
+  <div class="modal-contenido8">
+    <span class="cerrar8">&times;</span>
+    <h2 class="titulo-receta8">Título de receta</h2>
+
+    <div class="receta-info8">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal9">
+  <div class="modal-contenido9">
+    <span class="cerrar9">&times;</span>
+    <h2 class="titulo-receta9">Título de receta</h2>
+
+    <div class="receta-info9">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal10">
+  <div class="modal-contenido10">
+    <span class="cerrar10">&times;</span>
+    <h2 class="titulo-receta10">Título de receta</h2>
+
+    <div class="receta-info10">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal11">
+  <div class="modal-contenido11">
+    <span class="cerrar11">&times;</span>
+    <h2 class="titulo-receta11">Título de receta</h2>
+
+    <div class="receta-info11">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal12">
+  <div class="modal-contenido12">
+    <span class="cerrar12">&times;</span>
+    <h2 class="titulo-receta12">Título de receta</h2>
+
+    <div class="receta-info12">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+
+  <script src="JS-Postres.js"></script>
+</body>
+</html>

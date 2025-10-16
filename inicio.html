@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOODWARE</title>
+  <link rel="stylesheet" href="style.css2.css">
+</head>
+<body>
+
+  <!--  NAVBAR -->
+  <nav class="main-nav">
+    <div class="Nombre-nav">
+      <a href="index.html">FOODWARE</a>
+    </div>
+
+    <!--  Barra de búsqueda -->
+    <form class="search-form">
+      <input type="text" placeholder="Buscar receta..." id="buscar" />
+      <button type="submit">Buscar</button>
+    </form>
+
+    <!--  Menú desplegable -->
+    <div class="dropdown">
+      <button class="dropbtn">☰</button>
+      <div class="dropdown-content">
+         <li><a href="bebidas.html">Bebidas</a></li>
+        <li><a href="postres.html">Postres</a></li>
+      </div>
+    </div>
+
+    <!-- Botón de iniciar sesión -->
+    <a href="#" class="btn-login" id="abrir-login">Iniciar sesión</a>
+  </nav>
+
+  <!-- Banner -->
+  <header class="baner1">
+    <div class="position-text">
+      <h1 id="title-1">Bienvenido a FOODWARE</h1>
+      <p>Explora recetas, mira tutoriales y comparte tus creaciones.</p>
+    </div>
+  </header>
+
+  <!--  Recetas -->
+  <div class="contenedor">
+    <h1>Platillos principales</h1>
+    <main class="container-Recetas">
+      <div class="recetas-destacadas">
+        <h3>Pupusas</h3>
+        <img src="imagenes/Pupusas.jpg" alt="Pupusas">
+        <p>Descripción breve de la receta.</p>
+        <a href="#" class="boton-receta">Ver receta</a>
+      </div>
+
+      <div class="recetas-destacadas">
+        <h3>Tortas</h3>
+        <img src="imagenes/Quesadilla.jpg" alt="Tortas">
+        <p>Descripción breve de la receta.</p>
+        <a href="#" class="boton-receta">Ver receta</a>
+      </div>
+
+      <div class="recetas-destacadas">
+        <h3>Horchata</h3>
+        <img src="imagenes/Horchata.jpg" alt="Horchata">
+        <p>Descripción breve de la receta.</p>
+        <a href="#" class="boton-receta">Ver receta</a>
+      </div>
+    </main>
+  </div>
+
+  <!--  Modal Login -->
+  <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <span class="cerrar">&times;</span>
+      <h2>Inicia sesión o regístrate</h2>
+      <div class="login-container">
+        <form class="login-form">
+          <h3>Iniciar sesión</h3>
+          <input type="text" placeholder="Correo electrónico" required>
+          <input type="password" placeholder="Contraseña" required>
+          <button type="submit">Entrar</button>
+        </form>
+
+        <form class="register-form">
+          <h3>Registrarse</h3>
+          <input type="text" placeholder="Nombre completo" required>
+          <input type="email" placeholder="Correo electrónico" required>
+          <input type="password" placeholder="Contraseña" required>
+          <button type="submit">Crear cuenta</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ⚫ Footer -->
+  <footer class="container-footer">
+    <p>&copy; Foodware - Portal de Recetas</p>
+  </footer>
+
+  <script src="JS-pagina principal-js"></script>
+</body>
+</html>

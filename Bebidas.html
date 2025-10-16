@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+<body>
+  <header>
+    <div class="logo">
+      <img src="imagenes/Logo.jpg.png">
+      </div>
+    <nav>
+      <ul class="links">
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="platillos.sv.html">Platillos</a></li>
+      <li><a href="Postres.html">Postres</a></li>
+      <li><a href="Bebidas.html">Bebidas</a></li>
+      <li><a href="#">Videos</a></li>
+      <li><a href="Agregar-receta.html">Agregar receta</a></li>
+    </ul>
+    </nav>
+  </header>
+ <!-- CARRUSEL DE FONDO -->
+  <div class="hero-section">
+        <div class="carousel-container">
+            <div class="carousel-slide fade"><img src="imagenes/tamarindo.carrusel.jpg" alt="Postre 1"></div>
+      <div class="carousel-slide fade"><img src="imagenes/jamaica.carrusel.jpg" alt="Postre 2"></div>
+      <div class="carousel-slide fade"><img src="imagenes/horchata.carrusel.jpg" alt="Postre 3"></div>
+      <div class="carousel-slide fade"><img src="imagenes/atol.carrusel.jpg" alt="Postre 4"></div>
+ <div class="carousel-slide fade"><img src="imagenes/cebada.carrusel.jpg" alt="Postre 5"></div>
+  </div>
+
+    <div class="hero-text">
+      <h1>Sección de Bebidas</h1>
+      <p>Recetas sencillas, resultados deliciosos.</p>
+    </div>
+  </div>
+          
+
+
+   <main class="Categoria">
+    <section class="sección">
+      <h2>Bebidas</h2>
+      <div class="recipiente" id="Contenedor-postres">
+      </div>
+    </section>
+  </main>
+
+  <div class="receta">
+    <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Horchata</h3>
+      <img src="imagenes/Horchata.jpg" alt="Imagen de horchata" class="imagen-receta">
+      <p> Elaborado a partir de semillas de morro que le dan un sabor único.</p>
+      <p><b>Categoria:</b> Bebidas</p>
+      <p><b>Tipo:</b>Frio</p>
+      <p><b>Tiempo de preparación:</b> entre 40 y 50 minutos</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+      <button class="btn-ver-receta" onclick="Abrirmodal('receta-horchata')">Ver receta</button>
+    </div>
+      </div>
+       <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Atol de elote</h3>
+      <img src="imagenes/atol de elote.jpg" alt="Imagen de atol de elote" class="imagen-receta">
+      <p> bebida caliente, cremosa y reconfortante, elaborada con granos de maíz tierno licuados, leche y azúcar.</p>
+      <p><b>Categoria:</b> bebidas</p>
+      <p><b>Tipo:</b>caliente</p>
+      <p><b>Tiempo de preparación:</b> entre 40 y 50 minutos</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+      <button class="btn-ver-receta" onclick="Abrirmodal2('receta-atol de elote')">Ver receta</button>
+    </div>
+      </div>
+       <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Fresco de ensalada</h3>
+      <img src="imagenes/Fresco de ensalada.jpg" alt="Imagen de fresco de ensalada" class="imagen-receta">
+      <p>consiste en una mezcla de frutas tropicales como piña,manzana o pepino
+        con azúcar, sal, y una esencia de piña o melón para darle sabor. </p>
+      <p><b>Categoria:</b> bebidas</p>
+      <p><b>Tipo:</b>Frio</p>
+      <p><b>Tiempo de preparación:</b> entre 40 y 50 minutos</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+      <button class="btn-ver-receta" onclick="Abrirmodal3('receta-fresco de ensalada')">Ver receta</button>
+    </div>
+      </div>
+       <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Fresco de Jamaica</h3>
+      <img src="imagenes/Jamaica.jpg" alt="Imagen de Jamaica" class="imagen-receta">
+      <p>Bebida refrescante preparada con flores de jamaica hervidas y endulzadas con azúcar.</p>
+      <p><b>Categoria:</b> Bebida típica</p>
+      <p><b>Tipo:</b>Dulce y refrescante</p>
+      <p><b>Tiempo de preparación:</b> 30 minutos aproximadamente</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+      <button class="btn-ver-receta" onclick="Abrirmodal4('receta-fresco de jamaica')">Ver receta</button>
+    </div>
+      </div>
+      <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Fresco de Tamarindo</h3>
+      <img src="imagenes/Fresco Tamarindo.jpg" alt="Imagen de fresco de Tamarindo" class="imagen-receta">
+      <p>Refresco ácido-dulce elaborado con pulpa de tamarindo disuelta en agua y azúcar.</p>
+      <p><b>Categoria:</b> Dulce y refrescante</p>
+      <p><b>Tipo:</b>Dulce y refrescante</p>
+      <p><b>Tiempo de preparación:</b> 30 minutos</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+      <button class="btn-ver-receta" onclick="Abrirmodal5('receta-fresco de tamarindo')">Ver receta</button>
+    </div>
+  </div>
+    <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Cebada</h3>
+      <img src="imagenes/Cebada.jpg" alt="Imagen de fresco de cebada" class="imagen-receta">
+      <p>Bebida tradicional de color rosado preparada con harina de cebada y azúcar.</p>
+      <p><b>Categoria:</b> Bebida típica</p>
+      <p><b>Tipo:</b>Dulce</p>
+      <p><b>Tiempo de preparación:</b> 40 minutos</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+      <button class="btn-ver-receta" onclick="Abrirmodal6('receta-cebada')">Ver receta</button>
+    </div>
+    </div>
+       <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Fresco de Maracuya</h3>
+      <img src="imagenes/Maracuya.jpg" alt="Imagen de fresco de maracuya" class="imagen-receta">
+      <p>Refresco de sabor ácido y tropical hdecho con pulpa de maracuyá, agua y azúcar.</p>
+     <p><b>Categoria:</b> Bebida típica</p>
+      <p><b>Tipo:</b>Dulce y refrescante</p>
+      <p><b>Tiempo de preparación:</b> 20 minutos</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+     <button class="btn-ver-receta" onclick="Abrirmodal7('receta-fresco de maracuya')">Ver receta</button>
+    </div>
+      </div>
+      <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Fresco de chan</h3>
+      <img src="imagenes/Chan (2).jpg" alt="Imagen de fresco de chan" class="imagen-receta">
+      <p>Bebida natural preparada con semillas de chan hidratadas en agua, endulzada con azúcar o miel.</p>
+      <p><b>Categoria:</b> bebida típica</p>
+      <p><b>Tipo:</b>Refrescante</p>
+      <p><b>Tiempo de preparación:</b> 15 minutos</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+      <button class="btn-ver-receta" onclick="Abrirmodal8('receta-fresco de chan')">Ver receta</button>
+    </div>
+  </div>
+    <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Atol de maíz tostado</h3>
+      <img src="imagenes/Atol de maíz tostado.jpg" alt="Imagen de fresco de cebada" class="imagen-receta">
+      <p>Bebida caliente espesa hecha con maíz tostado y molido, cocinado con agua, leche y endulzado con azucar.</p>
+      <p><b>Categoria:</b> bebida típica</p>
+      <p><b>Tipo:</b>caliente</p>
+      <p><b>Tiempo de preparación:</b> 45 minutos</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+      <button class="btn-ver-receta" onclick="Abrirmodal9('receta-atol de maíz tostado')">Ver receta</button>
+    </div>
+    </div>
+    </div>
+  </div>
+   </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Foodware. Todos los derechos reservados.</p>
+  </footer>
+
+
+<div class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar">&times;</span>
+    <h2 class="titulo-receta">Título de receta</h2>
+
+    <div class="receta-info">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+
+<div class="modal2">
+  <div class="modal-contenido2">
+    <span class="cerrar2">&times;</span>
+    <h2 class="titulo-receta2">Título de receta</h2>
+
+    <div class="receta-info2">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal3">
+  <div class="modal-contenido3">
+    <span class="cerrar3">&times;</span>
+    <h2 class="titulo-receta3">Título de receta</h2>
+
+    <div class="receta-info3">
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal4">
+  <div class="modal-contenido4">
+    <span class="cerrar4">&times;</span>
+    <h2 class="titulo-receta4">Título de receta</h2>
+
+    <div class="receta-info4">
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal5">
+  <div class="modal-contenido5">
+    <span class="cerrar5">&times;</span>
+    <h2 class="titulo-receta5">Título de receta</h2>
+
+    <div class="receta-info5">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal6">
+  <div class="modal-contenido6">
+    <span class="cerrar6">&times;</span>
+    <h2 class="titulo-receta6">Título de receta</h2>
+
+    <div class="receta-info6">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal7">
+  <div class="modal-contenido7">
+    <span class="cerrar7">&times;</span>
+    <h2 class="titulo-receta7">Título de receta</h2>
+
+    <div class="receta-info7">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal8">
+  <div class="modal-contenido8">
+    <span class="cerrar8">&times;</span>
+    <h2 class="titulo-receta8">Título de receta</h2>
+
+    <div class="receta-info8">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal9">
+  <div class="modal-contenido9">
+    <span class="cerrar9">&times;</span>
+    <h2 class="titulo-receta9">Título de receta</h2>
+
+    <div class="receta-info9">
+      <!-- Aquí JS insertará ingredientes y preparación -->
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<script src="JS-Bebidas.js"></script>
+</body>
+</html>

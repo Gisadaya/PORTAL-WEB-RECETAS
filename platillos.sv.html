@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="imagenes/Logo.jpg.png">
+      </div>
+    <nav>
+      <ul class="links">
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="platillos.html">Platillos</a></li>
+      <li><a href="Postres.html">Postres</a></li>
+      <li><a href="Bebidas.html">Bebidas</a></li>
+      <li><a href="#">Videos</a></li>
+      <li><a href="#">Agregar receta</a></li>
+    </ul>
+    </nav>
+  </header>
+   <!-- CARRUSEL DE FONDO -->
+  <div class="hero-section">
+        <div class="carousel-container">
+            <div class="carousel-slide fade"><img src="imagenes/comidas.carrusel.png" alt="Postre 1"></div>
+      <div class="carousel-slide fade"><img src="imagenes/pupusas.carrusel.png" alt="Postre 2"></div>
+      <div class="carousel-slide fade"><img src="imagenes/sopa.carrusel.png" alt="Postre 3"></div>
+      <div class="carousel-slide fade"><img src="imagenes/enchilada.carrusel.png" alt="Postre 4"></div>
+      <div class="carousel-slide fade"><img src="imagenes/panrelleno.carrusel.png" alt="Postre 5"></div>
+      <div class="carousel-slide fade"><img src="imagenes/rigua.carrusel.png" alt="Postre 6"></div>
+<div class="carousel-slide fade"><img src="imagenes/yuca.carrusel.png" alt="Postre 7"></div>
+    </div>
+
+        <div class="hero-text">
+      <h1>Sección de Platillos</h1>
+      <p>Recetas sencillas, resultados deliciosos.</p>
+    </div>
+  </div>
+          <main class="Categoria">
+          <section class="sección">
+            <h2>Platillos</h2>
+            <div class="recipiente" id="Contenedor-postres"></div>
+          </section>
+        </main>
+</div>
+
+
+ 
+  <div class="receta">
+    <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Pupusas</h3>
+      <img src="imagenes/Pupusas.jpg" alt="Imagen de Pupusas" class="imagen-receta">
+      <p>son tortillas gruesas hechas de masa de maíz o arroz, rellenas antes de cocinarse en un comal y 
+        servidas con curtido y salsa de tomate.</p>
+      <p><b>Categoria:</b> plato tipíco</p>
+      <p><b>Tipo:</b> A base de arroz y maíz</p>
+      <p><b>Tiempo de preparación:</b> 1 hora</p>
+      
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+       <button class= "btn-ver-receta" onclick ="Abrirmodal('receta-pupusas')">Ver receta</button>
+       
+       </div>
+        </div>
+          
+       
+       <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Tamales de pollo</h3>
+      <img src="imagenes/Tamales pollo.jpg" alt="Imagen de Tamales de pollo" class="imagen-receta">
+      <p>Masa de maíz rellena con pollo, papa, y especias, envuelto en hojas de plátano y cocido al vapor.</p>
+      <p><b>Categoria:</b> platillo típico</p>
+      <p><b>Tipo:</b>comida salada</p>
+      <p><b>Tiempo de preparación:</b> 5 horas</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+     
+    <button class= "btn-ver-receta" onclick ="Abrirmodal2('receta-tamales de pollo')">Ver receta</button>
+       
+         </div>
+         </div>
+     
+      
+         
+       <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Riguas</h3>
+      <img src="imagenes/Riguas.jpg" alt="Imagen de Riguas" class="imagen-receta">
+      <p>Unas tortitas dulces y suaves, similares a los panqueques, hechas con masa de elote tierno rallado.</p>
+      <p><b>Categoria:</b>platillo salvadoreño</p>
+      <p><b>Tipo:</b> Tortilla de masa de elote</p>
+      <p><b>Tiempo de preparación:</b> Aproximadamente 45 minutos.</p>
+    
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+      <button class= "btn-ver-receta" onclick ="Abrirmodal3('receta-riguas')">Ver receta</button>
+       
+         </div>
+         </div>
+   
+         
+       <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Sopa de res</h3>
+      <img src="imagenes/sopa de res.jpg" alt="Imagen de sopa de res" class="imagen-receta">
+      <p>Caldo espeso preparado con carne de res y abundantes verduras como yuca, guisquil y repollo.</p>
+      <p><b>Categoria:</b> plato fuerte</p>
+      <p><b>Tipo:</b> comida salada</p>
+      <p><b>Tiempo de preparación:</b>2 horas</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+    
+      <button class= "btn-ver-receta" onclick ="Abrirmodal4('receta-sopa de res')">Ver receta</button>
+    </div>
+      </div>
+
+      
+      <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Sopa de gallina india</h3>
+      <img src="imagenes/Sopa de gallina india.jpg" alt="Imagen de sopa de gallina india" class="imagen-receta">
+      <p>Caldo tradicional preparado con gallina india, verduras y hierbas.</p>
+      <p><b>Categoria:</b> platillo típico</p>
+      <p><b>Tipo:</b> comida salada</p>
+      <p><b>Tiempo de preparación:</b> 1 hora y 30 minutos aproximadamente</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+    
+      <button class= "btn-ver-receta" onclick ="Abrirmodal5('receta-sopa de gallina india')">Ver receta</button>
+    </div>
+  </div>
+  
+    <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Sopa de frijoles con hueso de cerdo</h3>
+      <img src="imagenes/Sopa de frijoles con hueso de cerdo.jpg" alt="Imagen de sopa de frijoles con hueso de cerdo" class="imagen-receta">
+      <p>preparado con frijoles rojos frescos, trozos de hueso de cerdo, yuca, pipianes, elote y otras verduras.</p>
+      <p><b>Categoria:</b> platillo típico</p>
+      <p><b>Tipo:</b> Sopa o caldo.</p>
+      <p><b>Tiempo de preparación:</b> 1 hora y 30 minutos aproximadamente</p>
+      
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+    
+      <button class= "btn-ver-receta" onclick ="Abrirmodal6('receta-sopa de frijoles con hueso de cerdo')">Ver receta</button>
+    </div>
+    </div>
+    <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Panes rellenos</h3>
+      <img src="imagenes/Panes rellenos.jpg" alt="Imagen de panes rellenos" class="imagen-receta">
+      <p>Pan frances relleno con diferentes quisos, acompañado de vegetales o encurtidos.</p>
+      <p><b>Categoria:</b> platillo típico</p>
+      <p><b>Tipo:</b> comida salada</p>
+      <p><b>Tiempo de preparación:</b> 1 hora y media</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+    
+      <button class= "btn-ver-receta" onclick ="Abrirmodal7('receta-panes rellenos')">Ver receta</button>
+    </div>
+    </div>
+    <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Sopa de pata</h3>
+      <img src="imagenes/Sopa de pata.jpg" alt="Imagen de sopa de pata" class="imagen-receta">
+      <p>Un caldo tradicional y especiado hecho con pata de res, tripa y tendones, lo que le da una textura gelatinosa.</p>
+      <p><b>Categoria:</b> Platillo típico</p>
+      <p><b>Tipo:</b> Sopa con un perfil de sabor audaz.</p>
+      <p><b>Tiempo de preparación:</b> 2 horas</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+    
+      <button class= "btn-ver-receta" onclick ="Abrirmodal8('receta-sopa de pata')">Ver receta</button>
+    </div>
+    </div>
+    <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Panes con pollo</h3>
+      <img src="imagenes/Pan con pollo.jpg" alt="Imagen de panes con pollo" class="imagen-receta">
+      <p>Pan frances relleno con pollo guisado y acompañado de vegetales frescos y curtido.</p>
+      <p><b>Categoria:</b> platillo típico</p>
+      <p><b>Tipo:</b> comida salada</p>
+      <p><b>Tiempo de preparación:</b> 1 hora</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+    
+      <button class= "btn-ver-receta" onclick ="Abrirmodal9('receta-panes con pollo')">Ver receta</button>
+    </div>
+    </div>
+    <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Tamales de elote</h3>
+      <img src="imagenes/Tamales de elote.jpg" alt="Imagen de tamales de elote" class="imagen-receta">
+      <p>Masa de elote tierno molido, envuelta en hojas de mazorca y cocida al vapor.</p>
+      <p><b>Categoria:</b> platillo típico</p>
+      <p><b>Tipo:</b> Dulce-salada</p>
+      <p><b>Tiempo de preparación:</b> 1 hora y media</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+     <button class= "btn-ver-receta" onclick ="Abrirmodal10('receta-tamales de elote')">Ver receta</button>
+    </div>
+    </div>
+ <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">yuca frita</h3>
+      <img src="imagenes/yuca frita.jpg" alt="Imagen de yuca frita" class="imagen-receta">
+      <p>Yuca cocida y luego frita hasata quedar dorada, servida con curtido y salsa.</p>
+      <p><b>Categoria:</b> Platillo típico</p>
+      <p><b>Tipo:</b> comida salada</p>
+      <p><b>Tiempo de preparación:</b> 40 minutos</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+      
+     <button class= "btn-ver-receta" onclick ="Abrirmodal11('receta-yuca frita')">Ver receta</button>
+    </div>
+    </div>
+ <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Pasteles</h3>
+      <img src="imagenes/Pasteles.jpg" alt="Imagen de pasteles" class="imagen-receta">
+      <p>Masa de maíz rellena de papa, frita hasta quedar crujiente y servida con curtido y salsa.</p>
+      <p><b>Categoria:</b> Antojito típico</p>
+      <p><b>Tipo:</b> Salada y frita</p>
+      <p><b>Tiempo de preparación:</b> 1 hora</p>
+      
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+      <button class= "btn-ver-receta" onclick ="Abrirmodal12('receta-pasteles')">Ver receta</button>
+    </div>
+    </div>
+<div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Pescado calzado</h3>
+      <img src="imagenes/pescado calzado.jpg" alt="Imagen de pescado calzado" class="imagen-receta">
+      <p>Pescado frito cubierto con salsa de tomate.</p>
+      <p><b>Categoria:</b> platillo fuerte</p>
+      <p><b>Tipo:</b> comida salada</p>
+      <p><b>Tiempo de preparación:</b> 1 hora</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+      <button class= "btn-ver-receta" onclick ="Abrirmodal13('receta-pescado calzado')">Ver receta</button>
+    </div>
+    </div>
+ <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Enchiladas</h3>
+      <img src="imagenes/Enchiladas.jpg" alt="Imagen de enchiladas" class="imagen-receta">
+      <p>Tortilla frita cubierta con frijoles, queso, carne, huevo duro y ensalada encima.</p>
+      <p><b>Categoria:</b>Antojo típico</p>
+      <p><b>Tipo:</b> Comida salada</p>
+      <p><b>Tiempo de preparación:</b> 40 minutos aproximadamente.</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+      
+      <button class= "btn-ver-receta" onclick ="Abrirmodal14('receta-enchiladas')">Ver receta</button>
+    </div>
+    </div>
+ <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Chilaquilas</h3>
+      <img src="imagenes/Chilaquilas.jpg" alt="Imagen de chilaquiles" class="imagen-receta">
+      <p>Tortillas de maíz frita, remojada en salsa de tomate y cubierta con queso y, en ocasiones, huevo.</p>
+      <p><b>Categoria:</b> Antojo típico</p>
+      <p><b>Tipo:</b>Comida salada</p>
+      <p><b>Tiempo de preparación:</b> 30 minutos </p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+      
+      <button class= "btn-ver-receta" onclick ="Abrirmodal15('receta-chilaquilas')">Ver receta</button>
+    </div>
+    </div>
+<div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Pasteles de picadillo</h3>
+      <img src="imagenes/pasteles de picadillo.jpg" alt="Imagen de pasteles de picadillo" class="imagen-receta">
+      <p>Masa de maíz rellena con picadillo de carne y verduras, frita hasta quedar dorada.</p>
+      <p><b>Categoria:</b> Antojito típico</p>
+      <p><b>Tipo:</b> Salada y frita</p>
+      <p><b>Tiempo de preparación:</b> 1 hora</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+      <button class= "btn-ver-receta" onclick ="Abrirmodal16('receta-pasteles de picadillo')">Ver receta</button>
+    </div>
+    </div>
+ <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Pollo guisado</h3>
+      <img src="imagenes/pollo guisado.jpg" alt="Imagen de pollo guisado" class="imagen-receta">
+      <p>Pollo cocinado en salsa de tomate con papas, zanahoria y especias.</p>
+      <p><b>Categoria:</b> plato fuerte</p>
+      <p><b>Tipo:</b> Comida salada</p>
+      <p><b>Tiempo de preparación:</b> 1 hora y media</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+      
+      <button class= "btn-ver-receta" onclick ="Abrirmodal17('receta-pollo guisado')">Ver receta</button>
+    </div>
+    </div>
+ <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Pupusas de soya</h3>
+      <img src="imagenes/pupusas de soya.jpg" alt="Imagen de pupusas de soya" class="imagen-receta">
+      <p>Pupusas elaboradas con masa de maíz rellenas de soya procesada, queso y especias.</p>
+      <p><b>Categoria:</b> Plato típico</p>
+      <p><b>Tipo:</b> Comida salada</p>
+      <p><b>Tiempo de preparación:</b> 45 minutos aproximadamente</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+      
+      <button class= "btn-ver-receta" onclick ="Abrirmodal18('receta-pupusas de soya')">Ver receta</button>
+    </div>
+    </div>
+    <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Rellenos de coliflor</h3>
+      <img src="imagenes/Rellenos de coliflor.jpg" alt="Imagen de rellenos de coliflor" class="imagen-receta">
+      <p>Trozos de coliflor envueltos en huevo batido, fritos y servidos con salsa de tomate.</p>
+      <p><b>Categoria:</b> Antojito típico</p>
+      <p><b>Tipo:</b>Salado y frito</p>
+      <p><b>Tiempo de preparación:</b> 50 minutos aproximadamente</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+     <button class= "btn-ver-receta" onclick ="Abrirmodal19('receta-rellenos de coliflor')">Ver receta</button>
+    </div>
+    </div>
+ <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">pollo encebollado</h3>
+      <img src="imagenes/Pollo encebollado.jpg" alt="Imagen de pollo encebollado" class="imagen-receta">
+      <p>Pollo frito o dorado al sartén, acompañado de abundante cebolla sofrita.</p>
+      <p><b>Categoria:</b> Plato fuerte</p>
+      <p><b>Tipo:</b> Comida salada</p>
+      <p><b>Tiempo de preparación:</b> 45 minutos aproximadamente</p>
+      
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+
+<button class= "btn-ver-receta" onclick ="Abrirmodal20('receta-pollo encebollado')">Ver receta</button>
+    </div>
+    </div>
+ <div class="contenido">
+      <div class="espaciado">
+      <span class="boton-cerrar"></span>
+      <h3 id="Titulo-modal">Chiles rellenos</h3>
+      <img src="imagenes/Chiles rellenos.jpg" alt="Imagen de chiles rellenos" class="imagen-receta">
+      <p>Chiles verdes relenos decarne o verduras, envueltos en huevo batido, fritos y servidos en salsa.</p>
+      <p><b>Categoria:</b> Antojito típico</p>
+      <p><b>Tipo:</b> Comida salada y frita</p>
+      <p><b>Tiempo de preparación:</b> 1 hora</p>
+
+      <div class="interactividad">
+        <div class="like" data-receta-id="Empanadas">
+          <i class="far fa-thumbs-up like-icon"></i>
+          <span class="manito">0</span>
+      </div>
+
+      <div class="rating">
+        <i class="far fa-star estrellas" data-valor="1"></i>
+        <i class="far fa-star estrellas" data-valor="2"></i>
+        <i class="far fa-star estrellas" data-valor="3"></i>
+        <i class="far fa-star estrellas" data-valor="4"></i>
+        <i class="far fa-star estrellas" data-valor="5"></i>
+      </div>
+      </div>
+      
+      <button class= "btn-ver-receta" onclick ="Abrirmodal21('receta-chiles rellenos')">Ver receta</button>
+    </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+ <footer>
+    <p>&copy; 2025 Foodware. Todos los derechos reservados.</p>
+  </footer>
+
+  <div class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar">&times;</span>
+    <h2 class="titulo-receta">Título de receta</h2>
+
+    <div class="receta-info">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal2">
+  <div class="modal-contenido2">
+    <span class="cerrar2">&times;</span>
+    <h2 class="titulo-receta2">Título de receta</h2>
+
+    <div class="receta-info2">
+     /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal3">
+  <div class="modal-contenido3">
+    <span class="cerrar3">&times;</span>
+    <h2 class="titulo-receta3">Título de receta</h2>
+
+    <div class="receta-info3">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal4">
+  <div class="modal-contenido4">
+    <span class="cerrar4">&times;</span>
+    <h2 class="titulo-receta4">Título de receta</h2>
+
+    <div class="receta-info4">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal5">
+  <div class="modal-contenido5">
+    <span class="cerrar5">&times;</span>
+    <h2 class="titulo-receta5">Título de receta</h2>
+
+    <div class="receta-info5">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal6">
+  <div class="modal-contenido6">
+    <span class="cerrar6">&times;</span>
+    <h2 class="titulo-receta6">Título de receta</h2>
+
+    <div class="receta-info6">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal7">
+  <div class="modal-contenido7">
+    <span class="cerrar7">&times;</span>
+    <h2 class="titulo-receta7">Título de receta</h2>
+
+    <div class="receta-info7">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal8">
+  <div class="modal-contenido8">
+    <span class="cerrar8">&times;</span>
+    <h2 class="titulo-receta8">Título de receta</h2>
+
+    <div class="receta-info8">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal9">
+  <div class="modal-contenido9">
+    <span class="cerrar9">&times;</span>
+    <h2 class="titulo-receta9">Título de receta</h2>
+
+    <div class="receta-info9">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal10">
+  <div class="modal-contenido10">
+    <span class="cerrar10">&times;</span>
+    <h2 class="titulo-receta10">Título de receta</h2>
+
+    <div class="receta-info10">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal11">
+  <div class="modal-contenido11">
+    <span class="cerrar11">&times;</span>
+    <h2 class="titulo-receta11">Título de receta</h2>
+
+    <div class="receta-info11">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal12">
+  <div class="modal-contenido12">
+    <span class="cerrar12">&times;</span>
+    <h2 class="titulo-receta12">Título de receta</h2>
+
+    <div class="receta-info12">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+
+<div class="modal13">
+  <div class="modal-contenido13">
+    <span class="cerrar13">&times;</span>
+    <h2 class="titulo-receta13">Título de receta</h2>
+
+    <div class="receta-info13">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal14">
+  <div class="modal-contenido14">
+    <span class="cerrar14">&times;</span>
+    <h2 class="titulo-receta14">Título de receta</h2>
+
+    <div class="receta-info14">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal15">
+  <div class="modal-contenido15">
+    <span class="cerrar15">&times;</span>
+    <h2 class="titulo-receta15">Título de receta</h2>
+
+    <div class="receta-info15">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal16">
+  <div class="modal-contenido16">
+    <span class="cerrar16">&times;</span>
+    <h2 class="titulo-receta16">Título de receta</h2>
+
+    <div class="receta-info16">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal17">
+  <div class="modal-contenido17">
+    <span class="cerrar17">&times;</span>
+    <h2 class="titulo-receta17">Título de receta</h2>
+
+    <div class="receta-info17">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal18">
+  <div class="modal-contenido18">
+    <span class="cerrar18">&times;</span>
+    <h2 class="titulo-receta18">Título de receta</h2>
+
+    <div class="receta-info18">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal19">
+  <div class="modal-contenido19">
+    <span class="cerrar19">&times;</span>
+    <h2 class="titulo-receta19">Título de receta</h2>
+
+    <div class="receta-info19">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal20">
+  <div class="modal-contenido20">
+    <span class="cerrar20">&times;</span>
+    <h2 class="titulo-receta20">Título de receta</h2>
+
+    <div class="receta-info20">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal21">
+  <div class="modal-contenido21">
+    <span class="cerrar21">&times;</span>
+    <h2 class="titulo-receta21">Título de receta</h2>
+
+    <div class="receta-info21">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+
+
+
+  <script src="JS-platillos.sv.js"></script>
+</body>
+</html>

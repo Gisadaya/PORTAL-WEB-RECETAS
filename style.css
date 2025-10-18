@@ -138,21 +138,60 @@ nav{
 
 }
 
-.links{
+.links ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  background: transparent;
   display: flex;
-  text-align: right;
 }
 
-.links li{
-  margin-right: 20px;
-  font-weight: 600;
+.links ul li {
+  position: relative;
+}
+
+.links ul li a {
+  display: block;
+  color: white;
   text-decoration: none;
-  
-
+  padding: 14px 20px;
 }
+
+/* Submenú oculto */
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* Enlaces dentro del submenú */
+.sub-menu a {
+  color: white;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.sub-menu a:hover {
+  background-color: #333;
+}
+
+/* Mostrar submenú al pasar el mouse */
+.menu-desplegable:hover .sub-menu {
+  display: block;
+}
+
+/* Efecto visual en “Secciones” */
+.menu-desplegable:hover .menu-desplegableG {
+  background-color: #333;
+}
+
+
+
 
 .links a { /* letra menú*/
   color: white;
@@ -392,8 +431,23 @@ text-align: left;
   display: block;
   margin: 30px auto 10px auto;;
   border-radius: 10px;
-}
 
+}
+.tutorial-button{
+  background-color: #ad311b; /* Color del botón */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+
+}
+.tutorial-button:hover{
+  background-color: #e67e22;
+}
 
 .modal2{
   border: 4px solid rgb(255, 38, 0);
@@ -473,8 +527,24 @@ text-align: center;
   line-height: 1.5;
 text-align: left;
 
+}
+.tutorial-button2{
+  background-color: #ad311b; /* Color del botón */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 
 }
+.tutorial-button2:hover{
+  background-color: #e67e22;
+}
+
+
 .modal3{
   border: 4px solid rgb(255, 38, 0);
   display:none;
@@ -1624,7 +1694,7 @@ text-align: center;
 }
 
 .print-button {
-  background-color: #ff6347; /* Color del botón */
+  background-color: #9b2f1c; /* Color del botón */
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -1633,7 +1703,6 @@ text-align: center;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
-  align-items: center;
 }
 
 .print-button:hover {
@@ -1655,4 +1724,90 @@ footer{ /* pie de pagina*/
 footer.p{
   font-size: 3em;
 }
- 
+
+
+.titulo-videos {
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 100px;
+}
+
+/* ======== Línea negra con el título de cada sección ======== */
+.linea-seccion {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
+.linea-seccion::before,
+.linea-seccion::after {
+  content: "";
+  flex: 1;
+  border-bottom: 3px solid #000; /* línea negra */
+}
+
+.linea-seccion:not(:empty)::before {
+  margin-right: 10px;
+}
+
+.linea-seccion:not(:empty)::after {
+  margin-left: 10px;
+}
+
+.linea-seccion span {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #e63946; /* Cambia este color si quieres que resalte más */
+}
+
+/* ======== Carrusel principal ======== */
+.carrusel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.carrusel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.carrusel::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+/* ======== Tarjetas (videos + nombre) ======== */
+.tarjeta {
+  flex: 0 0 auto;
+  width: 380px; /* antes 320px → más grande */
+  text-align: center;
+  scroll-snap-align: center;
+}
+
+.tarjeta iframe {
+  width: 100%;
+  height: 215px; /* antes 180px → más grande */
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta iframe:hover {
+  transform: scale(1.05);
+}
+
+.tarjeta h3 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: 600;
+}

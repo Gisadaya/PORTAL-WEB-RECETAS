@@ -1818,6 +1818,13 @@ footer p {
 
 @media (max-width: 768px) {
 
+  body{
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   
   header {
     flex-direction: column;
@@ -1872,6 +1879,10 @@ footer p {
   /*  LÍNEAS DE SECCIÓN  */
   .linea-seccion span {
     font-size: 1.2em;
+  }
+  footer{
+    max-width: 100%;
+    overflow: hidden;
   }
 
   /*  PIE DE PÁGINA */
@@ -2073,7 +2084,7 @@ footer p {
 /* Pantallas medianas (tablets) */
 @media (max-width: 1024px) {
   .receta {
-    grid-template-columns: repeat(2, 1fr); /* 2 por fila */
+    grid-template-columns: repeat(3, 1fr); /* 2 por fila */
   }
 }
 
@@ -2098,4 +2109,4 @@ footer p {
   .rating {
     justify-content: flex-start;
   }
-}
+} 

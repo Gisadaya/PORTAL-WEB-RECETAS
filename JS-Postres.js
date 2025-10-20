@@ -1245,3 +1245,5 @@ function llenarEstrellas(estrellas, valor) {
 }
 
 
+
+

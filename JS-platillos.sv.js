@@ -1983,12 +1983,12 @@ function Abrirmodal20(recetaId) {
       </div>
       <div class="preparacion">
         <h3>Preparación</h3>
-        <ol>
+        <ul>
           <li><b>Paso 1:</b> Dora las piezas de pollo en una cacerola grande con aceite a fuego medio-alto hasta que estén doradas</li>
           <li><b>Paso 2:</b> Agrega el ajo y cocina por unos minutos, luego incorpora el agua, sal y deja hervir hasta que el pollo esté tierno.</li>
           <li><b>Paso 3:</b>	Añade la salsa inglesa, la mostaza y la cebolla, cocinando a fuego lento hasta que la cebolla esté suave pero firme.</li>
           <li><b>Paso 4:</b>	Sirve el pollo encebollado y a disfrutar</li>
-        </ol>
+        </ul>
       </div>
     `;
   } else {
@@ -2060,10 +2060,12 @@ function Abrirmodal21(recetaId) {
       <div class="ingredientes">
         <h3>Ingredientes</h3>
         <ul>
-          <li>2 tazas de masa de maíz</li>
-          <li>1 taza de caldo de pollo</li>
-          <li>1 taza de pollo desmenuzado</li>
-          <li>Hojas de plátano para envolver</li>
+          <li>6 chiles verdes grandes</li>
+          <li>250 g de carne molida</li>
+          <li>1 papa y 1 zanahoria picada</li>
+          <li>1/2 tomate, 1/4 cebolla y 1 ajo picado</li>
+          <li>3 huevos</li>
+          <li>Harina, aceite, sal o consomé al gusto</li>
         </ul>
 
         
@@ -2073,11 +2075,13 @@ function Abrirmodal21(recetaId) {
       </div>
       <div class="preparacion">
         <h3>Preparación</h3>
-        <ol>
-          <li>Mezcla la masa con el caldo hasta obtener una consistencia suave.</li>
-          <li>Coloca un poco de masa en la hoja, agrega el pollo y envuelve.</li>
-          <li>Cocina los tamales al vapor por aproximadamente 45 minutos.</li>
-        </ol>
+        <ul>
+          <li><b>Paso 1:</b> Asa y pela los chiles quitales las semillas.</li>
+          <li><b>Paso 2:</b> Sofríe cebolla y ajo, agrega carne, tomate, papa y zanahoria. cocina y sazona.</li>
+          <li><b>Paso 3:</b>	Bate claras a punto de nieve, añade yemas, pasa los ciles pr harina y luego por el huevo.</li>
+          <li><b>Paso 4:</b>	Licúa tomate, cebolla, ajo y cilantro, sofrie y vierte sobre los chiles.</li>
+           <li><b>Paso 5:</b> Y listo a servir.</li>
+        </ul>
       </div>
     `;
   } else {

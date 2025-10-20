@@ -2047,3 +2047,32 @@ footer.p{
     max-width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .receta {
+    grid-template-columns: repeat(3, 1fr); /* Mantiene 3 columnas */
+    gap: 8px;
+  }
+
+  .contenido {
+    margin: 10px;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .imagen-receta {
+    border-radius: 8px;
+  }
+
+  .receta-info {
+    grid-template-columns: 1fr; /* En modales, pasa a 1 columna */
+  }
+
+  .hero-text h1 {
+    font-size: 2em; /* Reduce el título */
+  }
+
+  .hero-text p {
+    font-size: 1.2em;
+  }
+}

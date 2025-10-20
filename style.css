@@ -84,15 +84,6 @@ header {
     margin-top: 0; 
     width: 100%;
     box-sizing: border-box;
-}
-.video.inicio main {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  border-radius: 15px;
 
 
 }
@@ -1775,6 +1766,9 @@ footer.p{
   gap: 16px;
   padding-bottom: 10px;
   scroll-snap-type: x mandatory;
+
+  flex-wrap: nowrap;
+  
 }
 
 .carrusel::-webkit-scrollbar {
@@ -1799,6 +1793,7 @@ footer.p{
   height: 215px; /* antes 180px → más grande */
   border-radius: 12px;
   transition: transform 0.3s ease;
+  max-width: 400px;
 }
 
 .tarjeta iframe:hover {
@@ -1810,4 +1805,245 @@ footer.p{
   font-size: 1.1rem;
   color: #222;
   font-weight: 600;
+}
+
+/* SOLO APLICA PARA AJUSTAR AL TAMAÑO DE UN TELEFONO MOVIL SECCIÓN DE VIDEOS */
+
+@media (max-width: 768px) {
+
+  
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 120px; /* ajusta el tamaño del logo */
+  }
+
+  nav ul {
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1); /* transparente */
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  nav ul li a {
+    font-size: 1.1em;
+  }
+
+  /* === TÍTULO DE VIDEOS === */
+  .titulo-videos {
+    font-size: 1.7em;
+    margin-top: 120px; /* baja el título para que no lo tape el menú */
+  }
+
+  /*  CARRUSELES  */
+  .carrusel {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .tarjeta iframe,
+  .tarjeta video {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    border-radius: 12px;
+  }
+
+  .tarjeta h3 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  /*  LÍNEAS DE SECCIÓN  */
+  .linea-seccion span {
+    font-size: 1.2em;
+  }
+
+  /*  PIE DE PÁGINA */
+  footer p {
+    font-size: 0.9em;
+  }
+}
+
+/*CODIGO RESPONSIVE DE INICO*/
+@media (max-width: 1024px) {
+  .hero-text h1 {
+    font-size: 3em;
+  }
+
+  .hero-text p {
+    font-size: 1.2em;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Para celulares (pantallas de hasta 768px) */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.2em;
+  }
+}
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .links ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .links ul li a {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+  }
+  @media (max-width: 768px) {
+
+  /* Ajustar el submenú */
+  .sub-menu {
+    position: static;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .sub-menu a {
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Sección principal */
+  .sección h2 {
+    font-size: 2em;
+  }
+
+  .receta-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .receta {
+    grid-template-columns: 1fr; /* Solo una columna en pantallas pequeñas */
+  }
+
+  .contenido {
+    width: 90%;
+    margin: 10px auto;
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .contenido p {
+    font-size: 16px;
+  }
+
+  .imagen-receta {
+    width: 100%;
+    height: auto;
+  }
+
+  .interactividad {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .boton-receta {
+    padding: 8px 15px;
+    font-size: 16px;
+  }
+}
+
+/* Versión aún más compacta para celulares pequeños */
+@media (max-width: 480px) {
+  .sección h2 {
+    font-size: 1.5em;
+  }
+
+  .contenido {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  .boton-receta {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-contenido {
+    width: 90%;
+    height: auto;
+    max-width: 95%;
+    margin-top: 80px;
+    padding: 15px;
+  }
+
+  .receta-info {
+    grid-template-columns: 1fr; /* De dos columnas a una sola */
+    gap: 20px;
+  }
+
+  .img-modal {
+    max-width: 80%;
+    margin: 20px auto;
+  }
+
+  .titulo-receta {
+    font-size: 1.5em;
+  }
+
+  .ingredientes h3, .preparacion h3 {
+    font-size: 1.2em;
+  }
+
+  .ingredientes li, .preparacion li {
+    font-size: 0.95em;
+  }
+
+  .tutorial-button {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .cerrar {
+    font-size: 24px;
+    top: 8px;
+    right: 10px;
+  }
+}
+
+/* Versión más compacta para celulares pequeños */
+@media (max-width: 480px) {
+  .modal-contenido {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .titulo-receta {
+    font-size: 1.3em;
+  }
+
+  .tutorial-button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .img-modal {
+    max-width: 100%;
+  }
 }

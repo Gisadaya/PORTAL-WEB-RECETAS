@@ -1901,6 +1901,15 @@ footer p {
     font-size: 1.2em;
   }
 
+  .hero-section {
+    position: relative; 
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden; 
+    
+}
+
+
   header {
     flex-direction: column;
     text-align: center;
@@ -1968,7 +1977,7 @@ footer p {
   }
 
   .receta {
-    grid-template-columns: 1fr; /* Solo una columna en pantallas pequeñas */
+    grid-template-columns: 2fr; /* Solo una columna en pantallas pequeñas */
   }
 
   .contenido {
@@ -2021,7 +2030,7 @@ footer p {
   }
 
   .receta-info {
-    grid-template-columns: 1fr; /* De dos columnas a una sola */
+    grid-template-columns: 2fr; /* De dos columnas a una sola */
     gap: 20px;
   }
 

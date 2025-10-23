@@ -80,6 +80,35 @@ header {
 
     }
 
+
+/*BUSCADOR DE RECETAS*/
+    .buscador-container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+#input-busqueda {
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.buscador-container button {
+  background-color: #b31b1b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.buscador-container button:hover {
+  background-color: #e67e22;
+}
+
 .Categoria {
     background-color:#DDAF46; 
     padding-top: 50px; 
@@ -1719,9 +1748,10 @@ footer { /* Pie de página */
 }
 
 footer p {
-  font-size: 1.5em;
+  font-size: 1em;
   margin: 0;
 }
+/* ======== TÍTULO DE LA SECCIÓN DE VIDEOS ======== */
 
 
 .titulo-videos {
@@ -1814,6 +1844,96 @@ footer p {
   font-weight: 600;
 }
 
+
+/*  Botones de acción (Me gusta y Ver más tarde) */
+.acciones-video {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.btn-like,
+.btn-watchlater {
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  padding: 8px 15px;
+  font-size: 0.95em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-like i {
+  color: #888;
+  font-size: 1.1em;
+}
+
+.btn-like:hover {
+  background-color: #ffe6eb;
+  border-color: #ff99aa;
+}
+
+.btn-watchlater:hover {
+  background-color: #e8f0ff;
+  border-color: #5b8bff;
+}
+
+.btn-like.activo i {
+  color: #ff2a68;
+}
+
+.btn-watchlater.activo {
+  background-color: #5b8bff;
+  color: #fff;
+  border-color: #5b8bff;
+}
+
+.btn-watchlater i {
+  color: inherit;
+}
+
+/* === Responsive para celulares === */
+@media (max-width: 600px) {
+
+    /* 1. Contenedor de Acciones (CLAVE para la alineación) */
+    .acciones-video {
+        display: flex; /* Habilita el modo flexible (horizontal por defecto) */
+        
+        /* CLAVE: Alinea los elementos (botones) a la derecha */
+       justify-content: flex-start; 
+        
+        /* Asegura que los botones se centren verticalmente si son de diferente altura */
+        align-items: center; 
+        
+        /* Espacio entre el botón de la izquierda y el de la derecha */
+        gap: 20px; 
+        
+        width: 100%; /* El contenedor debe ocupar todo el ancho */
+        padding: 5px 0; /* Un pequeño padding si es necesario */
+    }
+
+    /* 2. Botones (Asegurando que sean flexibles y compactos) */
+    .btn-like, 
+    .btn-watchlater {
+        /* Eliminamos el 'width: 50%' para que ocupen solo el espacio que necesitan (compactos) */
+        width: auto; 
+        padding: 8px 12px; /* Ajusta el relleno para que se vean bien en móvil */
+        font-size: 0.9rem; /* Un poco más pequeño para ahorrar espacio */
+    }
+    
+    /* Si el botón de "Me Gusta" es solo un ícono, puedes hacerlo más compacto */
+    .btn-like {
+        padding: 8px; /* Padding igual para hacerlo cuadrado */
+    }
+}
+
+
+
+
 /* SOLO APLICA PARA AJUSTAR AL TAMAÑO DE UN TELEFONO MOVIL SECCIÓN DE VIDEOS */
 
 @media (max-width: 768px) {
@@ -1887,7 +2007,7 @@ footer p {
 
   /*  PIE DE PÁGINA */
   footer p {
-    font-size: 0.5em;
+    font-size: 1em;
   }
 }
 
@@ -1917,7 +2037,7 @@ footer p {
 }
 
 /* Para celulares (pantallas de hasta 768px) */
-@media (max-width: 768px) {
+@media (max-width: 458px) {
 
   header {
     flex-direction: row; /* mantiene el menú horizontal */
@@ -1925,10 +2045,11 @@ footer p {
     justify-content: space-between;
     text-align: center;
     padding: 10px 15px;
+    font-size: 0.8em
   }
 
   .logo img {
-    width: 60px;
+    width: 40px;
     height: auto;
   }
 
@@ -1937,74 +2058,43 @@ footer p {
     flex-direction: row; /* mantiene horizontal */
     justify-content: center;
     align-items: center;
-    gap: 8px;
-    background: transparent;
-    padding: 0;
-    border-radius: 0;
   }
+    
+  @media (max-width: 458px) {
 
-  nav ul li {
-    margin: 0;
-  }
-
-  nav ul li a {
-    font-size: 0.9em;
-    padding: 8px 10px;
-  }
-
-  /* Ajuste del submenú en móviles */
-  .sub-menu {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.9);
-    width: auto;
-  }
-
-  .sub-menu a {
-    text-align: left;
-  }
-
-  }
+    
+    .buscador-container {
   
+        width: 80%; 
+        padding: 10px 15px; /* Agregamos relleno para que no se pegue a los bordes */
+        margin: 0 auto; 
+        
+        display: flex; 
+        gap: 5px;
+        
+        /* Aseguramos que esté centrado si el ancho no es 100% */
+        justify-content: center; 
+    }
 
-  /* Sección principal */
-  .sección h2 {
-    font-size: 2em;
-  }
+    
+    #input-busqueda {
+        flex-grow: 1; /* CLAVE: Ocupa todo el espacio restante */
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
 
-  .receta-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .receta {
-    grid-template-columns: 2fr; /* Solo una columna en pantallas pequeñas */
-  }
-
-  .contenido {
-    width: 90%;
-    margin: 10px auto;
-    font-size: 18px;
-    padding: 15px;
-  }
-
-  .contenido p {
-    font-size: 16px;
-  }
-
-  .imagen-receta {
-    width: 100%;
-    height: auto;
-  }
-
-
-
-  .boton-receta {
-    padding: 8px 15px;
-    font-size: 16px;
-  }
-
-
-/* Versión aún más compacta para celulares pequeños */
+    
+    .buscador-container button {
+        padding: 12px 15px;
+        font-size: 1rem;
+        flex-shrink: 0; /* Evita que el botón se reduzca */
+        border-radius: 5px;
+      
+    }
+}
+  
+  
 @media (max-width: 480px) {
   .sección h2 {
     font-size: 1.5em;
@@ -2020,50 +2110,7 @@ footer p {
   }
 }
 
-@media (max-width: 768px) {
-  .modal-contenido {
-    width: 90%;
-    height: auto;
-    max-width: 95%;
-    margin-top: 80px;
-    padding: 15px;
-  }
 
-  .receta-info {
-    grid-template-columns: 2fr; /* De dos columnas a una sola */
-    gap: 20px;
-  }
-
-  .img-modal {
-    max-width: 80%;
-    margin: 20px auto;
-  }
-
-  .titulo-receta {
-    font-size: 1.5em;
-  }
-
-  .ingredientes h3, .preparacion h3 {
-    font-size: 1.2em;
-  }
-
-  .ingredientes li, .preparacion li {
-    font-size: 0.95em;
-  }
-
-  .tutorial-button {
-    width: 100%;
-    font-size: 15px;
-  }
-
-  .cerrar {
-    font-size: 24px;
-    top: 8px;
-    right: 10px;
-  }
-}
-
-/* Versión más compacta para celulares pequeños */
 @media (max-width: 480px) {
   .modal-contenido {
     width: 95%;
@@ -2071,7 +2118,7 @@ footer p {
   }
 
   .titulo-receta {
-    font-size: 1.3em;
+    font-size: 1em;
   }
 
   .tutorial-button {
@@ -2090,29 +2137,55 @@ footer p {
   gap: 20px;
 }
 
-/* Pantallas medianas (tablets) */
-@media (max-width: 1024px) {
-  .receta {
-    grid-template-columns: repeat(3, 1fr); /* 2 por fila */
-  }
+/*CUADRICULAS DE RECETA*/
+@media (max-width: 458px) {
+
+    .receta {
+        grid-template-columns: repeat(2, 1fr); 
+        width: 100%;
+        gap: 10px; /* Reducimos el espacio un poco para que quepa mejor */
+        padding: 0 5px; /* Reducimos el relleno lateral */
+    }
+
+    .contenido {
+        margin: 0; 
+        padding: 10px; 
+        width: auto; 
+        font-size: 16px;
+    }
+    
+    .contenido h3 {
+        font-size: 1rem; /* Título más pequeño */
+    }
+    .contenido p {
+        font-size: 0.8rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2; /* Muestra solo 2 líneas */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    
+    .imagen-receta {
+        width: 100%;
+        height: 120px; /* Altura más pequeña para ahorrar espacio vertical */
+        object-fit: cover;
+    }
+
+    .receta-container {
+        gap: 0;
+    }
 }
 
-/* Pantallas pequeñas (celulares) */
-@media (max-width: 768px) {
-  .receta {
-    grid-template-columns: 1fr; /* 1 por fila */
-  }
+    
 
-  .contenido {
-    width: 90%;
-    margin: 10px auto;
-  }
-}
+    
+    
 /* RESPONSIVE: para móviles */
-@media (max-width: 768px) {
+@media (max-width: 458px) {
   .interactividad {
-    flex-direction: column; /* Manito arriba, estrellas debajo */
-    align-items: flex-start; /* Manito alineada a la izquierda */
+    flex-direction: left; /* Manito arriba, estrellas debajo */
+    align-items: flex-end; /* Manito alineada a la izquierda */
   }
 
   .rating {

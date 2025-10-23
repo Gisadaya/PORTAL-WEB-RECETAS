@@ -1,59 +1,65 @@
+
+  // ==== Carrusel desplazable manualmente ====
 const carruseles = document.querySelectorAll('.carrusel');
 
-// Velocidad de desplazamiento (en píxeles por intervalo)
-const velocidad = 2;
-
-// Intervalo de tiempo (en milisegundos)
-const intervalo = 20;
-
-// Recorre cada carrusel y aplica el desplazamiento automático
 carruseles.forEach(carrusel => {
-  let desplazamiento = 0;
+  let isDown = false;
+  let startX;
+  let scrollLeft;
 
-  function moverCarrusel() {
-    carrusel.scrollLeft += velocidad;
-    desplazamiento += velocidad;
+  carrusel.addEventListener('mousedown', (e) => {
+    isDown = true;
+    carrusel.classList.add('active');
+    startX = e.pageX - carrusel.offsetLeft;
+    scrollLeft = carrusel.scrollLeft;
+  });
 
-    // Si llega al final del carrusel, vuelve al inicio
-    if (carrusel.scrollLeft + carrusel.clientWidth >= carrusel.scrollWidth) {
-      carrusel.scrollLeft = 0;
-      desplazamiento = 0;
-    }
-  }
+  carrusel.addEventListener('mouseleave', () => {
+    isDown = false;
+    carrusel.classList.remove('active');
+  });
 
-  // Ejecuta el desplazamiento automático cada cierto tiempo
-  setInterval(moverCarrusel, intervalo);
+  carrusel.addEventListener('mouseup', () => {
+    isDown = false;
+    carrusel.classList.remove('active');
+  });
+
+  carrusel.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - carrusel.offsetLeft;
+    const walk = (x - startX) * 1.5; // velocidad del desplazamiento
+    carrusel.scrollLeft = scrollLeft - walk;
+  });
 });
 
 
-// === Carrusel automático de videos ===
+// === FUNCIONALIDAD DE BOTONES DE VIDEOS ===
 
-// Función para mover un carrusel automáticamente
-function iniciarCarrusel(idCarrusel) {
-  const carrusel = document.getElementById(idCarrusel);
-  let desplazamiento = 0;
+// ❤️ Botón "Me gusta"
+const botonesLike = document.querySelectorAll('.btn-like');
+botonesLike.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('activo');
+    const contador = btn.querySelector('.contador');
+    let cantidad = parseInt(contador.textContent);
 
-  function mover() {
-    // Mueve el carrusel suavemente hacia la derecha
-    desplazamiento += 1;
-    carrusel.scrollTo({
-      left: desplazamiento,
-      behavior: "smooth"
-    });
-
-    // Si llega al final, regresa al inicio
-    if (desplazamiento >= carrusel.scrollWidth - carrusel.clientWidth) {
-      desplazamiento = 0;
+    if (btn.classList.contains('activo')) {
+      contador.textContent = cantidad + 1;
+    } else {
+      contador.textContent = cantidad - 1;
     }
-  }
-
-  // Mueve el carrusel cada 40 milisegundos (ajustable)
-  setInterval(mover, 40);
-}
-
-// Iniciar los tres carruseles
-window.addEventListener("load", () => {
-  iniciarCarrusel("carrusel-platillos");
-  iniciarCarrusel("carrusel-postres");
-  iniciarCarrusel("carrusel-bebidas");
+  });
 });
+
+// ⏰ Botón "Ver más tarde"
+const botonesWatchLater = document.querySelectorAll('.btn-watchlater');
+botonesWatchLater.forEach(btn => {
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('activo');
+    btn.innerHTML = btn.classList.contains('activo')
+      ? '<i class="fas fa-check"></i> Agregado'
+      : '<i class="fas fa-clock"></i> Ver más tarde';
+  });
+});
+

@@ -24,6 +24,29 @@ function showSlides() {
     setTimeout(showSlides, 4000);
 }
 
+// ===== BUSCADOR DE RECETAS =====
+function buscarReceta() {
+  const input = document.getElementById("input-busqueda").value.toLowerCase().trim();
+  const recetas = document.querySelectorAll(".receta .contenido");
+  let encontrada = false;
+
+  recetas.forEach(receta => {
+    const titulo = receta.querySelector("h3").textContent.toLowerCase();
+
+    if (titulo.includes(input) && input !== "") {
+      receta.scrollIntoView({ behavior: "smooth", block: "center" });
+      receta.style.boxShadow = "0 0 20px gold";
+      receta.style.transition = "box-shadow 0.5s ease";
+      setTimeout(() => receta.style.boxShadow = "", 2500);
+      encontrada = true;
+    }
+  });
+
+  if (!encontrada && input !== "") {
+    alert("No se encontró ninguna receta con ese nombre.");
+  }
+}
+
 /*MODAL RECETA 1 PUPUSAS*/
 function Abrirmodal(recetaId) {
   const modal = document.querySelector('.modal');

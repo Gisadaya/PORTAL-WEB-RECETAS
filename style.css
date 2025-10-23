@@ -1936,7 +1936,7 @@ footer p {
 
 /* SOLO APLICA PARA AJUSTAR AL TAMAÑO DE UN TELEFONO MOVIL SECCIÓN DE VIDEOS */
 
-@media (max-width: 768px) {
+@media (max-width: 458px) {
 
   body{
     width: 100%;
@@ -2028,12 +2028,6 @@ footer p {
     overflow: hidden; 
     
 }
-
-
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
 }
 
 /* Para celulares (pantallas de hasta 768px) */
@@ -2064,7 +2058,6 @@ footer p {
 
     
     .buscador-container {
-  
         width: 80%; 
         padding: 10px 15px; /* Agregamos relleno para que no se pegue a los bordes */
         margin: 0 auto; 

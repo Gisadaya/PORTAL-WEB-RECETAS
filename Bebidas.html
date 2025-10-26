@@ -10,18 +10,38 @@
     <div class="logo">
       <img src="imagenes/Logo.jpg.png">
       </div>
-    <nav>
-      <ul class="links">
-      <li><a href="inicio.html">Inicio</a></li>
-      <li><a href="platillos.sv.html">Platillos</a></li>
-      <li><a href="Postres.html">Postres</a></li>
-      <li><a href="Bebidas.html">Bebidas</a></li>
-      <li><a href="#">Videos</a></li>
-      <li><a href="Agregar-receta.html">Agregar receta</a></li>
-    </ul>
-    </nav>
+
+      <div class="buscador-container">
+  <input type="text" id="input-busqueda" placeholder="Buscar receta...">
+  <button onclick="buscarReceta()">Buscar</button>
+</div>
+
+    <nav class="links">
+  
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Menú principal -->
+  <ul id="menu">
+    <li><a href="inicio.html">Inicio</a></li>
+
+    <li class="menu-desplegable">
+      <a href="#" class="menu-desplegableG">Secciones</a>
+      <div class="sub-menu">
+        <a href="platillos.sv.html">Platillos</a>
+        <a href="Postres.html">Postres</a>
+        <a href="Bebidas.html">Bebidas</a>
+      </div>
+    </li>
+     <li><a href="Videos.html">Videos</a></li>
+    <li><a href="comidas_saludables.html">Comidas Saludables</a></li>
+     <li><a href="Agregar-receta.html">Agregar Receta</a></li>
+  </ul>
+</nav>
   </header>
- <!-- CARRUSEL DE FONDO -->
+ 
+  
   <div class="hero-section">
         <div class="carousel-container">
             <div class="carousel-slide fade"><img src="imagenes/tamarindo.carrusel.jpg" alt="Postre 1"></div>
@@ -33,12 +53,10 @@
 
     <div class="hero-text">
       <h1>Sección de Bebidas</h1>
-      <p>Recetas sencillas, resultados deliciosos.</p>
+      <p>Desde la bebida mas refrescante, hasta los atoles mas deliciosos</p>
     </div>
   </div>
           
-
-
    <main class="Categoria">
     <section class="sección">
       <h2>Bebidas</h2>
@@ -47,6 +65,7 @@
     </section>
   </main>
 
+  
   <div class="receta">
     <div class="contenido">
       <div class="espaciado">
@@ -411,6 +430,7 @@
     </div>
 
     <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+    <a href="videos.html?video=empanadas" class="btn-tutorial">Ver tutorial</a>
   </div>
 </div>
 

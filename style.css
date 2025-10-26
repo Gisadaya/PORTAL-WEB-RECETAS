@@ -2,6 +2,9 @@
 
    body {
     margin: 0; 
+    overflow-x:hidden;
+   width: 100%;
+   padding: 0;
     font-family: Arial, sans-serif; 
     background-color:#DDAF46; 
 }
@@ -13,7 +16,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 10; 
-    background-color: rgba(0, 0, 0, 0.7); 
+    background-color: rgb(0, 0, 0); 
     color: white;
     padding: 10px 20px;
     display: flex;
@@ -77,6 +80,35 @@ header {
 
     }
 
+
+/*BUSCADOR DE RECETAS*/
+    .buscador-container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+#input-busqueda {
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.buscador-container button {
+  background-color: #b31b1b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.buscador-container button:hover {
+  background-color: #e67e22;
+}
+
 .Categoria {
     background-color:#DDAF46; 
     padding-top: 50px; 
@@ -84,15 +116,6 @@ header {
     margin-top: 0; 
     width: 100%;
     box-sizing: border-box;
-}
-.video.inicio main {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  border-radius: 15px;
 
 
 }
@@ -130,43 +153,132 @@ header {
    
 }
 
-nav{
+/* ======= MENÚ PRINCIPAL ======= */
+nav {
   display: flex;
-  justify-content: flex-end;/* mueve el menu a la derecha*/
-  
-
-
+  justify-content: flex-end; /* Mueve el menú a la derecha */
+  align-items: center;
+  background-color: #111; /* Fondo oscuro */
+  padding: 10px 20px;
 }
 
-.links{
+/* Lista del menú */
+.links ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  background: transparent;
   display: flex;
-  text-align: right;
 }
 
-.links li{
-  margin-right: 20px;
-  font-weight: 600;
-  text-decoration: none;
-  
-
+.links ul li {
+  position: relative;
 }
 
-.links a { /* letra menú*/
+.links ul li a {
+  display: block;
   color: white;
   text-decoration: none;
+  padding: 14px 20px;
+  transition: 0.3s;
+}
 
+/* ======= EFECTOS VISUALES ======= */
+.links a:hover {
+  color: rgb(255, 217, 0);
+  text-shadow: 0 0 10px;
+}
+
+/* ======= SUBMENÚ ======= */
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #111;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.sub-menu a {
+  color: white;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.sub-menu a:hover {
+  background-color: #333;
+}
+
+/* Mostrar submenú al pasar el mouse (PC) */
+.menu-desplegable:hover .sub-menu {
+  display: block;
+}
+
+/* Efecto en “Secciones” */
+.menu-desplegable:hover .menu-desplegableG {
+  background-color: #333;
+}
+
+/* ======= BOTÓN HAMBURGUESA ======= */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8em;
+  color: white;
+}
+
+/* ======= RESPONSIVE ======= */
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between;
   }
-  .links a:hover{/* color al mantener presionado los links del menú*/
-    color: rgb(255, 217, 0);
-    text-shadow: 0 0 10px; /* brillo medio */
 
-
-  
-
+  .menu-toggle {
+    display: block;
   }
+
+  .links ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: #111;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 15px 0;
+    z-index: 20;
+  }
+
+  .links ul.active {
+    display: flex;
+  }
+
+  .links ul li {
+    margin: 10px 0;
+  }
+
+  /* Submenú en móviles */
+  .sub-menu {
+    position: static;
+    display: none;
+    background: #222;
+    box-shadow: none;
+  }
+
+  .menu-desplegable.active .sub-menu {
+    display: block;
+  }
+}
+
+/* ======= ANIMACIÓN OPCIONAL: ÍCONO X ======= */
+.menu-toggle.active i::before {
+  content: "\f00d"; /* Ícono de "X" de Font Awesome */
+}
+
 
 
 .sección{ /* sección blanca*/
@@ -392,8 +504,23 @@ text-align: left;
   display: block;
   margin: 30px auto 10px auto;;
   border-radius: 10px;
-}
 
+}
+.tutorial-button{
+  background-color: #ad311b; /* Color del botón */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+
+}
+.tutorial-button:hover{
+  background-color: #e67e22;
+}
 
 .modal2{
   border: 4px solid rgb(255, 38, 0);
@@ -473,8 +600,24 @@ text-align: center;
   line-height: 1.5;
 text-align: left;
 
+}
+.tutorial-button2{
+  background-color: #ad311b; /* Color del botón */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
 
 }
+.tutorial-button2:hover{
+  background-color: #e67e22;
+}
+
+
 .modal3{
   border: 4px solid rgb(255, 38, 0);
   display:none;
@@ -1153,6 +1296,7 @@ text-align: center;
 animation-name: animatetop;
   animation-duration: 0.5s;
 }
+
 @keyframes animatetop{
   from {opacity: 0; transform: scale(0.9);}
   to {opacity: 1; transform: scale(1);}
@@ -1624,7 +1768,7 @@ text-align: center;
 }
 
 .print-button {
-  background-color: #ff6347; /* Color del botón */
+  background-color: #9b2f1c; /* Color del botón */
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -1633,7 +1777,6 @@ text-align: center;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
-  align-items: center;
 }
 
 .print-button:hover {
@@ -1641,18 +1784,540 @@ text-align: center;
 }
 
 
-footer{ /* pie de pagina*/
+footer { /* Pie de página */
   background-color: black;
-  height: 200px;;
+  width: 100%; /* Que cubra todo el ancho */
+  height: 200px;
   color: aliceblue;
   display: flex;
- justify-content: center;
- align-items: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+footer p {
+  font-size: 1em;
+  margin: 0;
+}
+/* ======== TÍTULO DE LA SECCIÓN DE VIDEOS ======== */
+
+
+.titulo-videos {
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 100px;
+}
+
+/* ======== Línea negra con el título de cada sección ======== */
+.linea-seccion {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
+.linea-seccion::before,
+.linea-seccion::after {
+  content: "";
+  flex: 1;
+  border-bottom: 3px solid #000; /* línea negra */
+}
+
+.linea-seccion:not(:empty)::before {
+  margin-right: 10px;
+}
+
+.linea-seccion:not(:empty)::after {
+  margin-left: 10px;
+}
+
+.linea-seccion span {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #e63946; /* Cambia este color si quieres que resalte más */
+}
+
+/* ======== Carrusel principal ======== */
+.carrusel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 16px;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+
+  flex-wrap: nowrap;
   
 }
 
-footer.p{
-  font-size: 3em;
+.carrusel::-webkit-scrollbar {
+  height: 8px;
 }
- 
+
+.carrusel::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+/* ======== Tarjetas (videos + nombre) ======== */
+.tarjeta {
+  flex: 0 0 auto;
+  width: 380px; /* antes 320px → más grande */
+  text-align: center;
+  scroll-snap-align: center;
+}
+
+.tarjeta iframe {
+  width: 100%;
+  height: 215px; /* antes 180px → más grande */
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  max-width: 400px;
+}
+
+.tarjeta iframe:hover {
+  transform: scale(1.05);
+}
+
+.tarjeta h3 {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #222;
+  font-weight: 600;
+}
+
+
+/*  Botones de acción (Me gusta y Ver más tarde) */
+.acciones-video {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.btn-like,
+.btn-watchlater {
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  padding: 8px 15px;
+  font-size: 0.95em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-like i {
+  color: #888;
+  font-size: 1.1em;
+}
+
+.btn-like:hover {
+  background-color: #ffe6eb;
+  border-color: #ff99aa;
+}
+
+.btn-watchlater:hover {
+  background-color: #e8f0ff;
+  border-color: #5b8bff;
+}
+
+.btn-like.activo i {
+  color: #ff2a68;
+}
+
+.btn-watchlater.activo {
+  background-color: #5b8bff;
+  color: #fff;
+  border-color: #5b8bff;
+}
+
+.btn-watchlater i {
+  color: inherit;
+}
+
+/* === Responsive para celulares === */
+@media (max-width: 600px) {
+
+    /* 1. Contenedor de Acciones (CLAVE para la alineación) */
+    .acciones-video {
+        display: flex; /* Habilita el modo flexible (horizontal por defecto) */
+        
+        /* CLAVE: Alinea los elementos (botones) a la derecha */
+       justify-content: flex-start; 
+        
+        /* Asegura que los botones se centren verticalmente si son de diferente altura */
+        align-items: center; 
+        
+        /* Espacio entre el botón de la izquierda y el de la derecha */
+        gap: 20px; 
+        
+        width: 100%; /* El contenedor debe ocupar todo el ancho */
+        padding: 5px 0; /* Un pequeño padding si es necesario */
+    }
+
+    /* 2. Botones (Asegurando que sean flexibles y compactos) */
+    .btn-like, 
+    .btn-watchlater {
+        /* Eliminamos el 'width: 50%' para que ocupen solo el espacio que necesitan (compactos) */
+        width: auto; 
+        padding: 8px 12px; /* Ajusta el relleno para que se vean bien en móvil */
+        font-size: 0.9rem; /* Un poco más pequeño para ahorrar espacio */
+    }
+    
+    /* Si el botón de "Me Gusta" es solo un ícono, puedes hacerlo más compacto */
+    .btn-like {
+        padding: 8px; /* Padding igual para hacerlo cuadrado */
+    }
+  }
+/* SOLO APLICA PARA AJUSTAR AL TAMAÑO DE UN TELEFONO MOVIL SECCIÓN DE VIDEOS */
+
+@media (max-width: 458px) {
+
+  body{
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 120px; /* ajusta el tamaño del logo */
+  }
+
+  nav ul {
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1); /* transparente */
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  nav ul li a {
+    font-size: 1.1em;
+  }
+
+  /* === TÍTULO DE VIDEOS === */
+  .titulo-videos {
+    font-size: 1.7em;
+    margin-top: 120px; /* baja el título para que no lo tape el menú */
+  }
+
+  /*  CARRUSELES  */
+  .carrusel {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .tarjeta iframe,
+  .tarjeta video {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    border-radius: 12px;
+  }
+
+  .tarjeta h3 {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  /*  LÍNEAS DE SECCIÓN  */
+  .linea-seccion span {
+    font-size: 1.2em;
+  }
+  footer{
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  /*  PIE DE PÁGINA */
+  footer p {
+    font-size: 1em;
+  }
+}
+
+/*CODIGO RESPONSIVE DE INICO*/
+@media (max-width: 1024px) {
+  .hero-text h1 {
+    font-size: 3em;
+  }
+
+  .hero-text p {
+    font-size: 1.2em;
+  }
+
+  .hero-section {
+    position: relative; 
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden; 
+    
+}
+}
+
+/* Para celulares (pantallas de hasta 768px) */
+@media (max-width: 458px) {
+
+  header {
+    flex-direction: row; /* mantiene el menú horizontal */
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 0.8em
+  }
+
+  .logo img {
+    width: 40px;
+    height: auto;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row; /* mantiene horizontal */
+    justify-content: center;
+    align-items: center;
+  }
+    
+  @media (max-width: 458px) {
+
+    
+    .buscador-container {
+        width: 80%; 
+        padding: 10px 15px; /* Agregamos relleno para que no se pegue a los bordes */
+        margin: 0 auto; 
+        
+        display: flex; 
+        gap: 5px;
+        
+        /* Aseguramos que esté centrado si el ancho no es 100% */
+        justify-content: center; 
+    }
+
+    
+    #input-busqueda {
+        flex-grow: 1; /* CLAVE: Ocupa todo el espacio restante */
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+
+    
+    .buscador-container button {
+        padding: 12px 15px;
+        font-size: 1rem;
+        flex-shrink: 0; /* Evita que el botón se reduzca */
+        border-radius: 5px;
+      
+    }
+}
+  
+  
+@media (max-width: 480px) {
+  .sección h2 {
+    font-size: 1.5em;
+  }
+
+  .contenido {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  .boton-receta {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .modal-contenido {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .titulo-receta {
+    font-size: 1em;
+  }
+
+  .tutorial-button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+
+  .img-modal {
+    max-width: 100%;
+  }
+}
+
+.receta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/*CUADRICULAS DE RECETA*/
+@media (max-width: 458px) {
+
+    .receta {
+        grid-template-columns: repeat(2, 1fr); 
+        width: 100%;
+        gap: 10px; /* Reducimos el espacio un poco para que quepa mejor */
+        padding: 0 5px; /* Reducimos el relleno lateral */
+    }
+
+    .contenido {
+        margin: 0; 
+        padding: 10px; 
+        width: auto; 
+        font-size: 16px;
+    }
+    
+    .contenido h3 {
+        font-size: 1rem; /* Título más pequeño */
+    }
+    .contenido p {
+        font-size: 0.8rem;
+        display: -webkit-box;
+        --webkit-line-clamp: 2; /* Muestra solo 2 líneas */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    
+    .imagen-receta {
+        width: 100%;
+        height: 120px; /* Altura más pequeña para ahorrar espacio vertical */
+        object-fit: cover;
+    }
+
+    .receta-container {
+        gap: 0;
+    }
+}
+
+    
+
+    
+    
+/* RESPONSIVE: para móviles */
+@media (max-width: 458px) {
+  .interactividad {
+    flex-direction: left; /* Manito arriba, estrellas debajo */
+    align-items: flex-end; /* Manito alineada a la izquierda */
+  }
+
+  .rating {
+    justify-content: flex-start;
+  }
+} 
+}
+
+
+/*SECCION COMIDA SALUDABLE*/
+
+/* Galería */
+.salud-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* Tarjetas */
+.salud-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.salud-card:hover {
+  transform: translateY(-5px);
+}
+
+.salud-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.salud-card h3 {
+  margin: 1rem;
+  color: #000000;
+  text-align: center;
+}
+
+.salud-card p {
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+/* Botones */
+.salud-botones {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+}
+.btn-like {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.btn-like.liked {
+  color: red;
+  transform: scale(1.2);
+}
+
+.salud-botones button:hover {
+  background-color: #f6df0e;
+}
+
+/* Efecto activo del botón Like */
+.salud-like.active {
+  background-color: #e91e63;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .salud-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .salud-card img {
+    height: 160px;
+  }
+
+  .salud-botones button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}

@@ -14,16 +14,34 @@
       <img src="imagenes/Logo.jpg.png" alt="Logo">
     </div>
 
-    <nav>
-      <ul class="links">
-        <li><a href="inicio.html">Inicio</a></li>
-        <li><a href="platillos.sv.html">Platillos</a></li>
-        <li><a href="Postres.html">Postres</a></li>
-        <li><a href="Bebidas.html">Bebidas</a></li>
-        <li><a href="#">Videos</a></li>
-        <li><a href="Agregar-receta.html">Agregar receta</a></li>
-      </ul>
-    </nav>
+<div class="buscador-container">
+  <input type="text" id="input-busqueda" placeholder="Buscar receta...">
+  <button onclick="buscarReceta()">Buscar</button>
+</div>
+
+    <nav class="links">
+  
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Menú principal -->
+  <ul id="menu">
+    <li><a href="inicio.html">Inicio</a></li>
+
+    <li class="menu-desplegable">
+      <a href="#" class="menu-desplegableG">Secciones</a>
+      <div class="sub-menu">
+        <a href="platillos.sv.html">Platillos</a>
+        <a href="Postres.html">Postres</a>
+        <a href="Bebidas.html">Bebidas</a>
+      </div>
+    </li>
+
+    <li><a href="comidas_saludables.html">Comidas Saludables</a></li>
+     <li><a href="Agregar-receta.html">Agregar Receta</a></li>
+  </ul>
+</nav>
   </header>
 
   <!-- CARRUSEL DE FONDO -->
@@ -42,6 +60,8 @@
       <p>Recetas sencillas, resultados deliciosos.</p>
     </div>
   </div>
+
+
           <main class="Categoria">
           <section class="sección">
             <h2>Postres</h2>
@@ -231,7 +251,7 @@
             <div class="espaciado">
               <span class="boton-cerrar"></span>
               <h3 id="Titulo-modal">Canoas</h3>
-              <img src="imagenes/canoas.jpg" alt="Imagen de canoas" class="imagen-receta">
+              <img src="imagenes/Canoas.jpg" alt="Imagen de canoas" class="imagen-receta">
               <p>Preparado con jocote cocido en miel, obteniendo un sabor dulce y aromático.</p>
               <p><b>Categoría:</b> Postres</p>
               <p><b>Tipo:</b> Dulce en almíbar</p>

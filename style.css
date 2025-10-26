@@ -9,6 +9,13 @@
     background-color:#DDAF46; 
 }
 
+@media (max-width: 458px) {
+    body {
+        font-size: 13px; 
+        padding: 0 5px; 
+    }
+}
+
 
 header {
     position: absolute; 

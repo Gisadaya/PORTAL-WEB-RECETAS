@@ -28,8 +28,29 @@ carruseles.forEach(carrusel => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - carrusel.offsetLeft;
-    const walk = (x - startX) * 1.5; // velocidad del desplazamiento
+    const walk = (x - startX) * 1.5; 
     carrusel.scrollLeft = scrollLeft - walk;
+  });
+});
+
+
+// Botón hamburguesa
+const toggle = document.querySelector(".menu-toggle");
+const links = document.querySelector(".links ul");
+
+toggle.addEventListener("click", () => {
+  toggle.classList.toggle("active");
+  links.classList.toggle("active");
+});
+
+// Submenús en móviles (por toque)
+document.querySelectorAll(".menu-desplegable > a").forEach(link => {
+  link.addEventListener("click", (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      const parent = link.parentElement;
+      parent.classList.toggle("active");
+    }
   });
 });
 

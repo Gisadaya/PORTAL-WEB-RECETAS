@@ -24,6 +24,27 @@ function showSlides() {
     setTimeout(showSlides, 4000);
 }
 
+// Botón hamburguesa
+const toggle = document.querySelector(".menu-toggle");
+const links = document.querySelector(".links ul");
+
+toggle.addEventListener("click", () => {
+  toggle.classList.toggle("active");
+  links.classList.toggle("active");
+});
+
+// Submenús en móviles (por toque)
+document.querySelectorAll(".menu-desplegable > a").forEach(link => {
+  link.addEventListener("click", (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      const parent = link.parentElement;
+      parent.classList.toggle("active");
+    }
+  });
+});
+
+
 // ===== BUSCADOR DE RECETAS =====
 function buscarReceta() {
   const input = document.getElementById("input-busqueda").value.toLowerCase().trim();

@@ -10,8 +10,20 @@
     <div class="logo">
       <img src="imagenes/Logo.jpg.png">
       </div>
+
+      <div class="buscador-container">
+  <input type="text" id="input-busqueda" placeholder="Buscar receta...">
+  <button onclick="buscarReceta()">Buscar</button>
+</div>
+
     <nav class="links">
-  <ul>
+  
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Menú principal -->
+  <ul id="menu">
     <li><a href="inicio.html">Inicio</a></li>
 
     <li class="menu-desplegable">
@@ -22,9 +34,9 @@
         <a href="Bebidas.html">Bebidas</a>
       </div>
     </li>
-
-    <li><a href="Videos.html">Videos</a></li>
-    <li><a href="Agregar-receta.html">Agregar receta</a></li>
+     <li><a href="Videos.html">Videos</a></li>
+    <li><a href="comidas_saludables.html">Comidas Saludables</a></li>
+     <li><a href="Agregar-receta.html">Agregar Receta</a></li>
   </ul>
 </nav>
   </header>
@@ -45,8 +57,6 @@
     </div>
   </div>
           
-
-
    <main class="Categoria">
     <section class="sección">
       <h2>Bebidas</h2>

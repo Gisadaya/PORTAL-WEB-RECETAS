@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Comidas Saludables Salvadoreñas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <title>Comidas Saludables Salvadoreñas</title>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="imagenes/Logo.jpg.png">
+    </div>
+
+  
+     <nav class="links">
+  
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <!-- Menú principal -->
+  <ul id="menu">
+    <li><a href="inicio.html">Inicio</a></li>
+
+    <li class="menu-desplegable">
+      <a href="#" class="menu-desplegableG">Secciones</a>
+      <div class="sub-menu">
+        <a href="platillos.sv.html">Platillos</a>
+        <a href="Postres.html">Postres</a>
+        <a href="Bebidas.html">Bebidas</a>
+      </div>
+    </li>
+     <li><a href="Videos.html">Videos</a></li>
+    <li><a href="comidas_saludables.html">Comidas Saludables</a></li>
+     <li><a href="Agregar-receta.html">Agregar Receta</a></li>
+  </ul>
+</nav>
+  </header>
+
+  <main>
+    <section class="videos">
+      <h2 class="titulo-videos">Comidas Saludables Salvadoreñas</h2>
+
+  <section class="salud-galeria">
+
+  
+  <div class="salud-card">
+    <img src="imagenes/pupusasMora.png" alt="Tamales de elote">
+    <h3>Pupusas de mora</h3>
+    <p>Versión saludable de la tradicional pupusa, usando masa integral y relleno de moras frescas. Dulce y nutritiva rica en fibra y antioxidantes.</p>
+    <p><b>Tiempo de preparación:</b> 40 minutos</p>
+    <p><b>Calorías aproximadas por pupusa:</b> 150 kcal</p>
+    <div class="salud-botones">
+     <button class="btn-like">
+      <i class="fas fa-heart"></i> <span class="contador">0</span>
+    </button>
+      <button class="btn-ver-receta" onclick="Abrirmodal('receta-pupusasMora')">Ver receta</button>
+    </div>
+  </div>
+
+  <div class="salud-card">
+    <img src="imagenes/PescadoAsado.png" alt="Pupusas integrales">
+    <h3>Pescado Asado</h3>
+    <p>Preparadas con masa de maíz integral y rellenas de frijoles y queso bajo en grasa. Acompañadas con curtido sin exceso de sal.</p>
+    <p><b>Tiempo de preparación:</b> 45 minutos</p>
+    <p><b>Calorías aproximadas por porción (1 taza):</b> 180 kcal</p>
+    <div class="salud-botones">
+      <button class="btn-like">
+      <i class="fas fa-heart"></i> <span class="contador">0</span>
+    </button>
+      <button class="btn-ver-receta" onclick="Abrirmodal2('receta-PescadoAsado')">Ver receta</button>
+    </div>
+  </div>
+
+  <div class="salud-card">
+    <img src="imagenes/Salpicon.png" alt="Sopa de gallina criolla">
+    <h3>Salpicón de res</h3>
+    <p>Carne de res deshebrada mezclada con vegetales frescos, aderezado ligero, ideal como ensalada proteica.</p>
+    <p><b>Tiempo de preparación:</b> 45 minutos</p>
+    <p><b>Calorías aproximadas por porción (1 taza):</b> 180 kcal</p>
+    <div class="salud-botones">
+     <button class="btn-like">
+      <i class="fas fa-heart"></i> <span class="contador">0</span>
+    </button>
+      <button class="btn-ver-receta" onclick="Abrirmodal3('receta-Salpicon')">Ver receta</button>
+    </div>
+  </div>
+
+  <div class="salud-card">
+    <img src="imagenes/SandwichVegetales.png" alt="Ensalada salvadoreña de palmito">
+    <h3>Sándwich con verduras</h3>
+    <p>Sándwich integral lleno de vegetales frescos y proteína ligera, ideal para almuerzos saludables.</p>
+    <p><b>Tiempo de preparación:</b> 10 minutos</p>
+    <p><b>Calorías aproximadas por sándwich:</b> 250 kcal</p>
+    <div class="salud-botones">
+      <button class="btn-like">
+      <i class="fas fa-heart"></i> <span class="contador">0</span>
+    </button>
+      <button class="btn-ver-receta" onclick="Abrirmodal4('receta-sandwich')">Ver receta</button>
+    </div>
+  </div>
+
+  <div class="salud-card">
+    <img src="imagenes/ArrozLecheDescremada.png" alt="Tostadas de guacamole">
+    <h3>Arroz con leche descremada</h3>
+    <p>Versión ligera del clásico arroz con leche, preparado con leche descremada y endulzado naturalmente.</p>
+    <p><b>Tiempo de preparación:</b> 40 minutos</p>
+    <p><b>Calorías aproximadas por porción (1/2 taza):</b> 160 kcal</p>
+    <div class="salud-botones">
+      <button class="btn-like">
+      <i class="fas fa-heart"></i> <span class="contador">0</span>
+    </button>
+      <button class="btn-ver-receta" onclick="Abrirmodal5('receta-ArrozConLecheDescremada')">Ver receta</button>
+    </div>
+  </div>
+
+  <div class="salud-card">
+    <img src="imagenes/Platano_sancochado.png" alt="Tostadas de guacamole">
+    <h3>Plátanos al vapor</h3>
+    <p>Plátano maduro cocido al vapor, sin azúcar ni grasa añadida. Dulce natural, rico en potasio y fibra.</p>
+    <p><b>Tiempo de preparación:</b> 20 minutos</p>
+    <p><b>Calorías por porción (1 plátano):</b> 120 kcal</p>
+    <div class="salud-botones">
+     <button class="btn-like">
+      <i class="fas fa-heart"></i> <span class="contador">0</span>
+    </button>
+      <button class="btn-ver-receta" onclick="Abrirmodal6('receta-PlatanosVapor')">Ver receta</button>
+    </div>
+  </div>
+
+  <div class="salud-card">
+    <img src="imagenes/YucaSancochada.png" alt="Tostadas de guacamole">
+    <h3>Yuca sancochada</h3>
+    <p>Yuca cocida tradicional, pero sin fritura ni aderezos grasos. Rica en carbohidratos complejos y fibra.</p>
+    <p><b>Tiempo de preparación:</b> 30 minutos</p>
+    <p><b>Calorías por porción (100g):</b> 130 kcal</p>
+    <div class="salud-botones">
+     <button class="btn-like">
+      <i class="fas fa-heart"></i> <span class="contador">0</span>
+    </button>
+      <button class="btn-ver-receta" onclick="Abrirmodal7('receta-Yusancochada')">Ver receta</button>
+    </div>
+  </div>
+
+  <div class="salud-card">
+    <img src="imagenes/Nuegados-_horneados.png" alt="Tostadas de guacamole">
+    <h3>Nuegados horneados</h3>
+    <p>Versión al horno y ligera de los tradicionales nuegados, sin freír ni usar azúcar refinada.</p>
+    <p><b>Tiempo de preparación:</b> 35 minutos</p>
+    <p><b>Calorías por unidad:</b> 100 kcal</p>
+    <div class="salud-botones">
+      <button class="btn-like">
+      <i class="fas fa-heart"></i> <span class="contador">0</span>
+    </button>
+      <button class="btn-ver-receta" onclick="Abrirmodal8('receta-NueHorneados')">Ver receta</button>
+    </div>
+  </div>
+
+  <div class="salud-card">
+    <img src="imagenes/Chilate.png" alt="Tostadas de guacamole">
+    <h3>Chilate</h3>
+    <p>Bebida tradicional caliente de maíz con especias, preparada sin azúcar refinada ni crema espesa.</p>
+    <p><b>Tiempo de preparación:</b> 25 minutos</p>
+    <p><b>Calorías por taza:</b> 110 kcal</p>
+    <div class="salud-botones">
+      <button class="btn-like">
+      <i class="fas fa-heart"></i> <span class="contador">0</span>
+    </button>
+      <button class="btn-ver-receta" onclick="Abrirmodal9('receta-chilate')">Ver receta</button>
+    </div>
+  </div>
+
+  <div class="salud-card">
+    <img src="imagenes/HorchataMorro.png" alt="Tostadas de guacamole">
+    <h3>Horchata de morro</h3>
+    <p>Bebida tradicional salvadoreña adaptada con menos azúcar y sin leche entera.</p>
+    <p><b>Tiempo de preparación:</b> 15 minutos</p>
+    <p><b>Calorías por vaso (250ml):</b> 130 kcal</p>
+    <div class="salud-botones">
+     <button class="btn-like">
+      <i class="fas fa-heart"></i> <span class="contador">0</span>
+    </button>
+      <button class="btn-ver-receta" onclick="Abrirmodal10('receta-morro')">Ver receta</button>
+    </div>
+  </div>
+
+  <div class="salud-card">
+    <img src="imagenes/chanLimón.png" alt="Tostadas de guacamole">
+    <h3>Fresco de chan con limón</h3>
+    <p>Bebida refrescante y digestiva elaborada con semillas de chan.</p>
+    <p><b>Tiempo de preparación:</b> 10 minutos</p>
+    <p><b>Calorías por vaso:</b> 40 kcal</p>
+    <div class="salud-botones">
+      <button class="btn-like">
+      <i class="fas fa-heart"></i> <span class="contador">0</span>
+    </button>
+       <button class="btn-ver-receta" onclick="Abrirmodal11('receta-ChanLimon')">Ver receta</button>
+    </div>
+  </div>
+
+  <div class="salud-card">
+    <img src="imagenes/marañon.png" alt="Tostadas de guacamole">
+    <h3>Fresco de marañón</h3>
+    <p>Refresco casero con fruta natural de marañón, sin azúcar refinada.</p>
+    <p><b>Tiempo de preparación:</b> 15 minutos</p>
+    <p><b>Calorías por vaso:</b> 60 kcal</p>
+    <div class="salud-botones">
+      <button class="btn-like">
+      <i class="fas fa-heart"></i> <span class="contador">0</span>
+    </button>
+      <button class="btn-ver-receta" onclick="Abrirmodal12('receta-Marañon')">Ver receta</button>
+    </div>
+  </div>
+
+    <div class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar">&times;</span>
+    <h2 class="titulo-receta">Título de receta</h2>
+
+    <div class="receta-info">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal2">
+  <div class="modal-contenido2">
+    <span class="cerrar2">&times;</span>
+    <h2 class="titulo-receta2">Título de receta</h2>
+
+    <div class="receta-info2">
+     /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal3">
+  <div class="modal-contenido3">
+    <span class="cerrar3">&times;</span>
+    <h2 class="titulo-receta3">Título de receta</h2>
+
+    <div class="receta-info3">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal4">
+  <div class="modal-contenido4">
+    <span class="cerrar4">&times;</span>
+    <h2 class="titulo-receta4">Título de receta</h2>
+
+    <div class="receta-info4">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal5">
+  <div class="modal-contenido5">
+    <span class="cerrar5">&times;</span>
+    <h2 class="titulo-receta5">Título de receta</h2>
+
+    <div class="receta-info5">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal6">
+  <div class="modal-contenido6">
+    <span class="cerrar6">&times;</span>
+    <h2 class="titulo-receta6">Título de receta</h2>
+
+    <div class="receta-info6">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal7">
+  <div class="modal-contenido7">
+    <span class="cerrar7">&times;</span>
+    <h2 class="titulo-receta7">Título de receta</h2>
+
+    <div class="receta-info7">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal8">
+  <div class="modal-contenido8">
+    <span class="cerrar8">&times;</span>
+    <h2 class="titulo-receta8">Título de receta</h2>
+
+    <div class="receta-info8">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal9">
+  <div class="modal-contenido9">
+    <span class="cerrar9">&times;</span>
+    <h2 class="titulo-receta9">Título de receta</h2>
+
+    <div class="receta-info9">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+</div>
+
+<div class="modal10">
+  <div class="modal-contenido10">
+    <span class="cerrar10">&times;</span>
+    <h2 class="titulo-receta10">Título de receta</h2>
+
+    <div class="receta-info10">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+
+</div>
+
+<div class="modal11">
+  <div class="modal-contenido11">
+    <span class="cerrar11">&times;</span>
+    <h2 class="titulo-receta11">Título de receta</h2>
+
+    <div class="receta-info11">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+
+</div>
+
+<div class="modal12">
+  <div class="modal-contenido12">
+    <span class="cerrar12">&times;</span>
+    <h2 class="titulo-receta12">Título de receta</h2>
+
+    <div class="receta-info12">
+      /*RECETA Y PREPARACIÓN EN JS*/
+    </div>
+
+    <button onclick="window.print()" class="print-button"> 🖨️ Imprimir receta</button>
+  </div>
+
+</div>
+
+</section>
+   <script src="ComidasSaludables.js"></script>
+
+   <footer>
+    <p>&copy; 2025 Foodware. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+  

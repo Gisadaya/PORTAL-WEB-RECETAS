@@ -23,6 +23,52 @@ function showSlides() {
     // Cambia la imagen cada 5 segundos (5000 milisegundos)
     setTimeout(showSlides, 5000); 
 }
+
+// ===== BUSCADOR DE RECETAS =====
+function buscarReceta() {
+  const input = document.getElementById("input-busqueda").value.toLowerCase().trim();
+  const recetas = document.querySelectorAll(".receta .contenido");
+  let encontrada = false;
+
+  recetas.forEach(receta => {
+    const titulo = receta.querySelector("h3").textContent.toLowerCase();
+
+    if (titulo.includes(input) && input !== "") {
+      receta.scrollIntoView({ behavior: "smooth", block: "center" });
+      receta.style.boxShadow = "0 0 20px gold";
+      receta.style.transition = "box-shadow 0.5s ease";
+      setTimeout(() => receta.style.boxShadow = "", 2500);
+      encontrada = true;
+    }
+  });
+
+  if (!encontrada && input !== "") {
+    alert("No se encontró ninguna receta con ese nombre.");
+  }
+}
+
+// Botón hamburguesa
+const toggle = document.querySelector(".menu-toggle");
+const links = document.querySelector(".links ul");
+
+toggle.addEventListener("click", () => {
+  toggle.classList.toggle("active");
+  links.classList.toggle("active");
+});
+
+// Submenús en móviles (por toque)
+document.querySelectorAll(".menu-desplegable > a").forEach(link => {
+  link.addEventListener("click", (e) => {
+    if (window.innerWidth <= 768) {
+      e.preventDefault();
+      const parent = link.parentElement;
+      parent.classList.toggle("active");
+    }
+  });
+});
+
+
+
 /*MODAL RECETA 1 EMPANADAS*/
 function Abrirmodal(recetaId) {
   const modal = document.querySelector('.modal');

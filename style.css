@@ -16,7 +16,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 10; 
-    background-color: rgba(0, 0, 0, 0.7); 
+    background-color: rgb(0, 0, 0); 
     color: white;
     padding: 10px 20px;
     display: flex;
@@ -153,14 +153,16 @@ header {
    
 }
 
-nav{
+/* ======= MENÚ PRINCIPAL ======= */
+nav {
   display: flex;
-  justify-content: flex-end;/* mueve el menu a la derecha*/
-  
-
-
+  justify-content: flex-end; /* Mueve el menú a la derecha */
+  align-items: center;
+  background-color: #111; /* Fondo oscuro */
+  padding: 10px 20px;
 }
 
+/* Lista del menú */
 .links ul {
   list-style: none;
   margin: 0;
@@ -178,9 +180,16 @@ nav{
   color: white;
   text-decoration: none;
   padding: 14px 20px;
+  transition: 0.3s;
 }
 
-/* Submenú oculto */
+/* ======= EFECTOS VISUALES ======= */
+.links a:hover {
+  color: rgb(255, 217, 0);
+  text-shadow: 0 0 10px;
+}
+
+/* ======= SUBMENÚ ======= */
 .sub-menu {
   display: none;
   position: absolute;
@@ -188,10 +197,9 @@ nav{
   min-width: 160px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);
   border-radius: 4px;
-  z-index: 1;
+  z-index: 10;
 }
 
-/* Enlaces dentro del submenú */
 .sub-menu a {
   color: white;
   padding: 12px 16px;
@@ -203,32 +211,71 @@ nav{
   background-color: #333;
 }
 
-/* Mostrar submenú al pasar el mouse */
+/* Mostrar submenú al pasar el mouse (PC) */
 .menu-desplegable:hover .sub-menu {
   display: block;
 }
 
-/* Efecto visual en “Secciones” */
+/* Efecto en “Secciones” */
 .menu-desplegable:hover .menu-desplegableG {
   background-color: #333;
 }
 
-
-
-
-.links a { /* letra menú*/
+/* ======= BOTÓN HAMBURGUESA ======= */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 1.8em;
   color: white;
-  text-decoration: none;
+}
 
+/* ======= DISEÑO RESPONSIVO ======= */
+@media (max-width: 458px) {
+  nav {
+    justify-content: space-between;
   }
-  .links a:hover{/* color al mantener presionado los links del menú*/
-    color: rgb(255, 217, 0);
-    text-shadow: 0 0 10px; /* brillo medio */
 
-
-  
-
+  /* Mostrar el botón hamburguesa */
+  .menu-toggle {
+    display: block;
   }
+
+  /* Ocultar el menú por defecto */
+  .links {
+    display: none;
+    width: 100%;
+  }
+
+  /* Cuando se active el menú (JS agregará la clase 'active') */
+  .links.active {
+    display: block;
+  }
+
+  /* Menú en columna */
+  .links ul {
+    flex-direction: column;
+    width: 100%;
+    background-color: #111;
+  }
+
+  .links ul li a {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #333;
+  }
+
+  /* Submenú dentro del flujo */
+  .sub-menu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .menu-desplegable:hover .sub-menu {
+    display: none; /* Se controlará con JS si quieres abrirlo */
+  }
+}
+
 
 
 .sección{ /* sección blanca*/
@@ -1246,6 +1293,7 @@ text-align: center;
 animation-name: animatetop;
   animation-duration: 0.5s;
 }
+
 @keyframes animatetop{
   from {opacity: 0; transform: scale(0.9);}
   to {opacity: 1; transform: scale(1);}
@@ -1929,11 +1977,7 @@ footer p {
     .btn-like {
         padding: 8px; /* Padding igual para hacerlo cuadrado */
     }
-}
-
-
-
-
+  }
 /* SOLO APLICA PARA AJUSTAR AL TAMAÑO DE UN TELEFONO MOVIL SECCIÓN DE VIDEOS */
 
 @media (max-width: 458px) {
@@ -2153,7 +2197,7 @@ footer p {
     .contenido p {
         font-size: 0.8rem;
         display: -webkit-box;
-        -webkit-line-clamp: 2; /* Muestra solo 2 líneas */
+        --webkit-line-clamp: 2; /* Muestra solo 2 líneas */
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
@@ -2185,3 +2229,92 @@ footer p {
     justify-content: flex-start;
   }
 } 
+}
+
+
+/*SECCION COMIDA SALUDABLE*/
+
+/* Galería */
+.salud-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* Tarjetas */
+.salud-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.salud-card:hover {
+  transform: translateY(-5px);
+}
+
+.salud-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.salud-card h3 {
+  margin: 1rem;
+  color: #000000;
+  text-align: center;
+}
+
+.salud-card p {
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+/* Botones */
+.salud-botones {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  border-top: 1px solid #eee;
+}
+.btn-like {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.btn-like.liked {
+  color: red;
+  transform: scale(1.2);
+}
+
+.salud-botones button:hover {
+  background-color: #f6df0e;
+}
+
+/* Efecto activo del botón Like */
+.salud-like.active {
+  background-color: #e91e63;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .salud-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .salud-card img {
+    height: 160px;
+  }
+
+  .salud-botones button {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+}

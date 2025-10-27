@@ -1,17 +1,21 @@
+const menuToggle = document.querySelector('.menu-toggle');
+const links = document.querySelector('.links');
+const dropdowns = document.querySelectorAll('.menu-desplegable');
 
-// Menú desplegable
-  const menuToggle = document.getElementById('menu-toggle');
-  const menuList = document.getElementById('menu-list');
-  const dropdown = document.querySelector('.menu-desplegable');
+menuToggle.addEventListener('click', () => {
+  links.classList.toggle('active');
+});
 
-  menuToggle.addEventListener('click', () => {
-    menuList.classList.toggle('active');
+// Permite abrir submenús al tocar en móvil
+dropdowns.forEach(drop => {
+  drop.addEventListener('click', e => {
+    if (window.innerWidth <= 458) {
+      e.preventDefault();
+      drop.classList.toggle('open');
+    }
   });
+});
 
-  dropdown.addEventListener('click', (e) => {
-    e.preventDefault();
-    dropdown.classList.toggle('active');
-  });
 
 
 // Efecto de "Me gusta"

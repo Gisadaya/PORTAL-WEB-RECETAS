@@ -47,26 +47,23 @@ function buscarReceta() {
   }
 }
 
-// Botón hamburguesa
-const toggle = document.querySelector(".menu-toggle");
-const links = document.querySelector(".links ul");
+const menuToggle = document.querySelector('.menu-toggle');
+const links = document.querySelector('.links');
+const dropdowns = document.querySelectorAll('.menu-desplegable');
 
-toggle.addEventListener("click", () => {
-  toggle.classList.toggle("active");
-  links.classList.toggle("active");
+menuToggle.addEventListener('click', () => {
+  links.classList.toggle('active');
 });
 
-// Submenús en móviles (por toque)
-document.querySelectorAll(".menu-desplegable > a").forEach(link => {
-  link.addEventListener("click", (e) => {
-    if (window.innerWidth <= 768) {
+// Permite abrir submenús al tocar en móvil
+dropdowns.forEach(drop => {
+  drop.addEventListener('click', e => {
+    if (window.innerWidth <= 458) {
       e.preventDefault();
-      const parent = link.parentElement;
-      parent.classList.toggle("active");
+      drop.classList.toggle('open');
     }
   });
 });
-
 
 
 /*MODAL RECETA 1 EMPANADAS*/

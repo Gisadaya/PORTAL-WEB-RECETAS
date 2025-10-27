@@ -117,15 +117,18 @@ header {
 }
 
 .Categoria {
-    background-color:#DDAF46; 
-    padding-top: 50px; 
-    padding-bottom: 50px; 
-    margin-top: 0; 
-    width: 100%;
-    box-sizing: border-box;
-
-
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #000; /* Fondo negro o el color que desees */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Evita que algo sobresalga */
 }
+
+
 #searchInput{
   padding: 10px;
   width: 60%;

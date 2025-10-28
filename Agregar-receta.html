@@ -1,33 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css2.css">
-
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Recetas - Cocina Fácil</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agregar Receta | Foodware</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css2.css">
 </head>
 <body>
-   
-     <main class="container mt-4">
+  
 
+    <header class="top-bar">
+    <div class="logo">
+      <img src="imagenes/Logo.jpg.png" alt="Logo Foodware">
+    </div>
+    <a href="index.html" class="home-link"><i class="fas fa-home"></i> Volver al inicio</a>
+  </header>
 
-    <hr>
-    <h2>Agregar receta</h2>
-    <form id="form-receta">
-      <input type="text" class="form-control mb-2" id="nombre" placeholder="Nombre de la receta" required>
-      <input type="text" class="form-control mb-2" id="categoria" placeholder="Categoría" required>
-      <textarea class="form-control mb-2" id="ingredientes" placeholder="Ingredientes" required></textarea>
-      <textarea class="form-control mb-2" id="instrucciones" placeholder="Instrucciones" required></textarea>
-      <button class="btn btn-success" type="submit">Agregar receta</button>
+  <!-- Contenido principal -->
+  <main class="main-container">
+    <h2 class="form-title"><i class="fas fa-pen-to-square"></i> Agregar una nueva receta</h2>
+
+    <form id="form-agregar-receta" class="form-receta">
+      <label for="titulo-receta">Título de la receta</label>
+      <input type="text" id="titulo-receta" placeholder="Ejemplo: Pasta al pesto" required>
+
+      <label for="categoria-receta">Categoría</label>
+      <select id="categoria-receta" required>
+        <option value="">Selecciona una categoría</option>
+        <option value="Platillos">Platillos</option>
+        <option value="Postres">Postre</option>
+        <option value="Bebidas">Bebida</option>
+        <option value="Comida Saludable">Bebida</option>
+        <option value="Otro">Otro</option>
+      </select>
+
+      <label for="descripcion-receta">Descripción breve</label>
+      <textarea id="descripcion-receta" placeholder="Describe brevemente tu receta..." required></textarea>
+
+      <label for="ingredientes-receta">Ingredientes</label>
+      <textarea id="ingredientes-receta" placeholder="Escribe los ingredientes, separados por comas..." required></textarea>
+
+      <label for="pasos-receta">Pasos de preparación</label>
+      <textarea id="pasos-receta" placeholder="Describe los pasos para preparar la receta..." required></textarea>
+
+      <label for="imagen-receta">Foto de la receta</label>
+      <div class="file-upload">
+        <input type="file" id="imagen-receta" accept="image/*">
+      </div>
+
+      <div id="vista-previa" class="vista-previa"></div>
+
+      <button type="submit" class="btn-guardar"><i class="fas fa-save"></i> Guardar receta</button>
+
+      <div id="mensaje-exito" class="mensaje-exito">✅ ¡Tu receta se ha guardado correctamente!</div>
     </form>
   </main>
 
-  <script src="js/script.js"></script>
+ <footer>
+        <p>&copy; 2025 Foodware. Todos los derechos reservados.</p>
+    </footer>
+  <script src="AgregarReceta.js"></script>
 </body>
 </html>

@@ -9,6 +9,13 @@
     background-color:#DDAF46; 
 }
 
+@media (max-width: 458px) {
+    body {
+        font-size: 13px; 
+        padding: 0 5px; 
+    }
+}
+
 
 header {
     position: absolute; 
@@ -108,17 +115,19 @@ header {
 .buscador-container button:hover {
   background-color: #e67e22;
 }
-
 .Categoria {
-    background-color:#DDAF46; 
-    padding-top: 50px; 
-    padding-bottom: 50px; 
-    margin-top: 0; 
-    width: 100%;
-    box-sizing: border-box;
-
-
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #000; /* Fondo negro o el color que desees */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Evita que algo sobresalga */
 }
+
+
 #searchInput{
   padding: 10px;
   width: 60%;
@@ -143,7 +152,30 @@ header {
   background-color: hsl(64, 100%, 54%);
 }
 
+@media (max-width: 458px) {
+  .buscador-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+  }
 
+  #input-busqueda,
+  #searchInput {
+    width: 65%;
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .buscador-container button,
+  #searchButton {
+    width: auto;
+    padding: 8px 12px;
+    font-size: 13px;
+    margin-left: 5px;
+  }
+}
 
 .logo img{ /* imagen de logo*/
   height: 65px;
@@ -154,21 +186,29 @@ header {
 }
 
 /* ======= MENÚ PRINCIPAL ======= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 nav {
   display: flex;
-  justify-content: flex-end; /* Mueve el menú a la derecha */
+  justify-content: flex-end;
   align-items: center;
-  background-color: #111; /* Fondo oscuro */
-  padding: 10px 20px;
+  background-color: #111;
+  padding: 10px 25px;
+  position: relative;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Lista del menú */
+/* ======= LISTA DEL MENÚ ======= */
 .links ul {
   list-style: none;
   margin: 0;
   padding: 0;
   background: transparent;
   display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .links ul li {
@@ -177,38 +217,48 @@ nav {
 
 .links ul li a {
   display: block;
-  color: white;
+  color: #f2f2f2;
   text-decoration: none;
-  padding: 14px 20px;
-  transition: 0.3s;
+  padding: 12px 18px;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border-radius: 6px;
 }
 
 /* ======= EFECTOS VISUALES ======= */
-.links a:hover {
-  color: rgb(255, 217, 0);
-  text-shadow: 0 0 10px;
+.links ul li a:hover {
+  color: #ffd700;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.2);
 }
 
 /* ======= SUBMENÚ ======= */
 .sub-menu {
   display: none;
   position: absolute;
-  background-color: #111;
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  border-radius: 4px;
+  background-color: #1a1a1a;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  border-radius: 6px;
   z-index: 10;
+  overflow: hidden;
 }
 
 .sub-menu a {
-  color: white;
+  color: #f2f2f2;
   padding: 12px 16px;
   display: block;
   text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
 }
 
 .sub-menu a:hover {
   background-color: #333;
+  color: #ffd700;
 }
 
 /* Mostrar submenú al pasar el mouse (PC) */
@@ -216,68 +266,92 @@ nav {
   display: block;
 }
 
-/* Efecto en “Secciones” */
 .menu-desplegable:hover .menu-desplegableG {
-  background-color: #333;
+  background-color: #222;
 }
 
 /* ======= BOTÓN HAMBURGUESA ======= */
 .menu-toggle {
   display: none;
   cursor: pointer;
-  font-size: 1.8em;
-  color: white;
+  font-size: 1.4em;
+  color: #fff;
+  background: #222;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  transition: all 0.3s ease;
 }
 
-/* ======= RESPONSIVE ======= */
-@media (max-width: 768px) {
+.menu-toggle:hover {
+  background-color: #333;
+  color: #ffd700;
+}
+
+/* ======= RESPONSIVO ======= */
+@media (max-width: 458px) {
   nav {
     justify-content: space-between;
+    padding: 10px 15px;
   }
 
   .menu-toggle {
     display: block;
+    font-size: 1.3em;
   }
 
   .links ul {
-    display: none;
     flex-direction: column;
+    background-color: #000000ff;
     position: absolute;
     top: 60px;
     right: 0;
-    width: 100%;
-    background: #111;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    padding: 15px 0;
-    z-index: 20;
-  }
-
-  .links ul.active {
-    display: flex;
+    width: 200px;
+    display: none;
+    border-radius: 0 0 8px 8px;
+    padding: 10px 0;
+    animation: slideDown 0.3s ease forwards;
   }
 
   .links ul li {
-    margin: 10px 0;
+    width: 100%;
+    text-align: center;
   }
 
-  /* Submenú en móviles */
-  .sub-menu {
-    position: static;
-    display: none;
-    background: #222;
-    box-shadow: none;
-  }
-
-  .menu-desplegable.active .sub-menu {
+  .links ul li a {
+    padding: 12px 16px;
     display: block;
   }
+
+  .links.active ul {
+    display: flex;
+  }
+
+  /* Submenú dentro del modo móvil */
+  .menu-desplegable:hover .sub-menu {
+    display: none;
+  }
+
+  .menu-desplegable.open .sub-menu {
+    display: block;
+    position: relative;
+    box-shadow: none;
+  }
 }
 
-/* ======= ANIMACIÓN OPCIONAL: ÍCONO X ======= */
-.menu-toggle.active i::before {
-  content: "\f00d"; /* Ícono de "X" de Font Awesome */
+/* ======= ANIMACIÓN ======= */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
+  
 
 
 

@@ -47,27 +47,80 @@ function buscarReceta() {
   }
 }
 
-// Botón hamburguesa
-const toggle = document.querySelector(".menu-toggle");
-const links = document.querySelector(".links ul");
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const links = document.querySelector('.links');
+  const menu = document.getElementById('menu');
+  const menuDesplegable = document.querySelector('.menu-desplegable');
+  const menuDesplegableBtn = menuDesplegable ? menuDesplegable.querySelector('.menu-desplegableG') : null;
+  const subMenu = menuDesplegable ? menuDesplegable.querySelector('.sub-menu') : null;
 
-toggle.addEventListener("click", () => {
-  toggle.classList.toggle("active");
-  links.classList.toggle("active");
-});
+  
+  if (menuToggle && links) {
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      links.classList.toggle('active');
+      
+      const expanded = links.classList.contains('active');
+      menuToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
+  }
 
-// Submenús en móviles (por toque)
-document.querySelectorAll(".menu-desplegable > a").forEach(link => {
-  link.addEventListener("click", (e) => {
-    if (window.innerWidth <= 768) {
-      e.preventDefault();
-      const parent = link.parentElement;
-      parent.classList.toggle("active");
+ 
+  if (menuDesplegableBtn && menuDesplegable) {
+    
+    menuDesplegableBtn.addEventListener('click', (e) => {
+     
+      const isMobile = window.matchMedia('(max-width: 458px)').matches;
+      if (isMobile) {
+        e.preventDefault();
+        e.stopPropagation();
+        menuDesplegable.classList.toggle('open');
+        const expanded = menuDesplegable.classList.contains('open');
+        menuDesplegableBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      } else {
+       
+      }
+    });
+  }
+
+  
+  if (subMenu) {
+    subMenu.addEventListener('click', (e) => {
+      const target = e.target.closest('a');
+      if (!target) return;
+     
+    });
+  }
+
+  // Cerrar menú si se hace click fuera (mejora UX)
+  document.addEventListener('click', (e) => {
+    const clickInsideLinks = e.target.closest('.links');
+    if (!clickInsideLinks) {
+      links.classList.remove('active');
+      if (menuDesplegable) menuDesplegable.classList.remove('open');
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+      if (menuDesplegableBtn) menuDesplegableBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      links.classList.remove('active');
+      if (menuDesplegable) menuDesplegable.classList.remove('open');
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+      if (menuDesplegableBtn) menuDesplegableBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+
+  window.addEventListener('resize', () => {
+    if (!window.matchMedia('(max-width: 458px)').matches) {
+      if (menuDesplegable) menuDesplegable.classList.remove('open');
+      if (links) links.classList.remove('active');
     }
   });
 });
-
-
 
 /*MODAL RECETA 1 EMPANADAS*/
 function Abrirmodal(recetaId) {

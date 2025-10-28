@@ -1,105 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FOODWARE</title>
-  <link rel="stylesheet" href="style.css2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodware - Gastronomía Salvadoreña</title>
+    <link rel="stylesheet" href="style.css2.css"> 
+<script src="https://kit.fontawesome.com/a2e0e9c6b6.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-  <!--  NAVBAR -->
-  <nav class="main-nav">
-    <div class="Nombre-nav">
-      <a href="index.html">FOODWARE</a>
+  <!-- ====== BARRA SUPERIOR ====== -->
+  <header class="top-bar">
+    <div class="logo">
+      <img src="imagenes/Logo.jpg.png" alt="Logo Foodware">
     </div>
-
-    <!--  Barra de búsqueda -->
-    <form class="search-form">
-      <input type="text" placeholder="Buscar receta..." id="buscar" />
-      <button type="submit">Buscar</button>
-    </form>
-
-    <!--  Menú desplegable -->
-    <div class="dropdown">
-      <button class="dropbtn">☰</button>
-      <div class="dropdown-content">
-         <li><a href="Bebidas.html">Bebidas</a></li>
-        <li><a href="Postres.html">Postres</a></li>
-        <li><a href="platillos.sv.html">Platillos</a></li>
-      </div>
-    </div>
-
-    <!-- Botón de iniciar sesión -->
-    <a href="#" class="btn-login" id="abrir-login">Iniciar sesión</a>
-  </nav>
-
-  <!-- Banner -->
-  <header class="baner1">
-    <div class="position-text">
-      <h1 id="title-1">Bienvenido a FOODWARE</h1>
-      <p>Explora recetas, mira tutoriales y comparte tus creaciones.</p>
+    <div class="user-actions">
+      <button id="open-login" class="login-btn">
+        <i class="fas fa-user-circle"></i> Iniciar Sesión
+      </button>
+      
     </div>
   </header>
 
-  <!--  Recetas -->
-  <div class="contenedor">
-    <h1>Platillos principales</h1>
-    <main class="container-Recetas">
-      <div class="recetas-destacadas">
-        <h3>Pupusas</h3>
-        <img src="imagenes/Pupusas.jpg" alt="Pupusas">
-        <p>Descripción breve de la receta.</p>
-        <a href="#" class="boton-receta">Ver receta</a>
-      </div>
-
-      <div class="recetas-destacadas">
-        <h3>Tortas</h3>
-        <img src="imagenes/Quesadilla.jpg" alt="Tortas">
-        <p>Descripción breve de la receta.</p>
-        <a href="#" class="boton-receta">Ver receta</a>
-      </div>
-
-      <div class="recetas-destacadas">
-        <h3>Horchata</h3>
-        <img src="imagenes/Horchata.jpg" alt="Horchata">
-        <p>Descripción breve de la receta.</p>
-        <a href="#" class="boton-receta">Ver receta</a>
-      </div>
-    </main>
-  </div>
-
-  <!--  Modal Login -->
-  <div id="modal-login" class="modal">
-    <div class="modal-content">
-      <span class="cerrar">&times;</span>
-      <h2>Inicia sesión o regístrate</h2>
-      <div class="login-container">
-        <form class="login-form">
-          <h3>Iniciar sesión</h3>
-          <input type="text" placeholder="Correo electrónico" required>
-          <input type="password" placeholder="Contraseña" required>
-          <button type="submit">Entrar</button>
-        </form>
-
-        <form class="register-form">
-          <h3>Registrarse</h3>
-          <input type="text" placeholder="Nombre completo" required>
-          <input type="email" placeholder="Correo electrónico" required>
-          <input type="password" placeholder="Contraseña" required>
-          <button type="submit">Crear cuenta</button>
-        </form>
+  <!-- ====== SECCIÓN HERO ====== -->
+  <section class="hero">
+    <div class="cajita">
+      <div class="hero-content">
+        <h1>Bienvenido a <span>Foodware</span></h1>
+        <p>Descubre los mejores sabores, recetas saludables y la esencia de la gastronomía salvadoreña.</p>
+        <a href="platillos.sv.html" class="btn-hero">Explorar Recetas</a>
       </div>
     </div>
+  </section>
+
+ <!-- MODAL LOGIN -->
+<div id="login-overlay" class="overlay">
+  <div class="modal">
+    <button id="close-login" class="close-btn">×</button>
+    <form id="login-form">
+      <div class="icon-container">
+        <i class="fas fa-user-plus user-icon"></i>
+      </div>
+      <h2>Iniciar sesión</h2>
+      <input type="email" id="email" placeholder="Correo electrónico" required>
+      <input type="password" id="password" placeholder="Contraseña" required>
+      <button type="submit">Entrar</button>
+      <p>¿No tienes cuenta? <a href="#" id="register-link">Regístrate</a></p>
+    </form>
   </div>
+</div>
 
-  <!-- ⚫ Footer -->
-  <footer class="container-footer">
-    <p>&copy; Foodware - Portal de Recetas</p>
-  </footer>
+<!-- MODAL REGISTRO -->
+<div id="register-overlay" class="overlay">
+  <div class="modal">
+    <button id="close-register" class="close-btn">×</button>
+    <form id="register-form">
+      <div class="icon-container">
+        <i class="fas fa-user-plus user-icon"></i>
+      </div>
+      <h2>Crear cuenta</h2>
+      <input type="email" id="reg-email" placeholder="Correo electrónico" required>
+      <input type="password" id="reg-password" placeholder="Contraseña" required>
+      <input type="password" id="reg-confirm" placeholder="Confirmar contraseña" required>
+      <button type="submit">Registrarme</button>
+      <p>¿Ya tienes cuenta? <a href="#" id="back-login">Inicia sesión</a></p>
+    </form>
+  </div>
+</div>
 
-  <script src="JS-pagina principal-js"></script>
+  </section>
+    <section class="destacadas">
+        <h2>Recetas Destacadas</h2>
+        <div class="recetas-grid">
+            
+            <div class="receta">
+                <img src="imagenes/pupusas.carrusel.png" alt="Pupusas de queso">
+                <h3>Pupusas </h3>
+                <p>El clásico salvadoreño con relleno cremoso y un toque de curtido artesanal.</p>
+                <a href="platillos.sv.html">Ver receta</a>
+            </div>
+
+            <div class="receta">
+                <img src="imagenes/empanadas.carrusel.png" alt="Arroz con leche">
+                <h3>Empanadas</h3>
+                <p>Un postre tradicional con sabor a hogar, preparado con leche descremada y canela.</p>
+                <a href="Postres.html">Ver receta</a>
+            </div>
+
+            <div class="receta">
+                <img src="imagenes/jamaica.carrusel.jpg" alt="Fresco de Jamaica">
+                <h3>Fresco de Jamaica</h3>
+                <p>Una bebida natural, refrescante y llena del sabor único de la Jamaica salvadoreña.</p>
+                <a href="Bebidas.html">Ver receta</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Foodware. Todos los derechos reservados.</p>
+    </footer>
+<header style="display: flex; justify-content: center; align-items: center; padding: 10px; background-color: #f8f8f8;">
+    <script src="JS-pagina principal.js"></script>
 </body>
 </html>

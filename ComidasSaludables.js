@@ -1,17 +1,77 @@
-
-// Menú desplegable
+document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menu-toggle');
-  const menuList = document.getElementById('menu-list');
-  const dropdown = document.querySelector('.menu-desplegable');
+  const links = document.querySelector('.links');
+  const menu = document.getElementById('menu');
+  const menuDesplegable = document.querySelector('.menu-desplegable');
+  const menuDesplegableBtn = menuDesplegable ? menuDesplegable.querySelector('.menu-desplegableG') : null;
+  const subMenu = menuDesplegable ? menuDesplegable.querySelector('.sub-menu') : null;
 
-  menuToggle.addEventListener('click', () => {
-    menuList.classList.toggle('active');
+  
+  if (menuToggle && links) {
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      links.classList.toggle('active');
+      
+      const expanded = links.classList.contains('active');
+      menuToggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
+  }
+
+ 
+  if (menuDesplegableBtn && menuDesplegable) {
+    
+    menuDesplegableBtn.addEventListener('click', (e) => {
+     
+      const isMobile = window.matchMedia('(max-width: 458px)').matches;
+      if (isMobile) {
+        e.preventDefault();
+        e.stopPropagation();
+        menuDesplegable.classList.toggle('open');
+        const expanded = menuDesplegable.classList.contains('open');
+        menuDesplegableBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      } else {
+       
+      }
+    });
+  }
+
+  
+  if (subMenu) {
+    subMenu.addEventListener('click', (e) => {
+      const target = e.target.closest('a');
+      if (!target) return;
+     
+    });
+  }
+
+  // Cerrar menú si se hace click fuera (mejora UX)
+  document.addEventListener('click', (e) => {
+    const clickInsideLinks = e.target.closest('.links');
+    if (!clickInsideLinks) {
+      links.classList.remove('active');
+      if (menuDesplegable) menuDesplegable.classList.remove('open');
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+      if (menuDesplegableBtn) menuDesplegableBtn.setAttribute('aria-expanded', 'false');
+    }
   });
 
-  dropdown.addEventListener('click', (e) => {
-    e.preventDefault();
-    dropdown.classList.toggle('active');
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      links.classList.remove('active');
+      if (menuDesplegable) menuDesplegable.classList.remove('open');
+      if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+      if (menuDesplegableBtn) menuDesplegableBtn.setAttribute('aria-expanded', 'false');
+    }
   });
+
+
+  window.addEventListener('resize', () => {
+    if (!window.matchMedia('(max-width: 458px)').matches) {
+      if (menuDesplegable) menuDesplegable.classList.remove('open');
+      if (links) links.classList.remove('active');
+    }
+  });
+});
 
 
 // Efecto de "Me gusta"
@@ -27,15 +87,6 @@ botonesLike.forEach(btn => {
     } else {
       contador.textContent = cantidad - 1;
     }
-  });
-});
-
-// Efecto de "Ver más"
-const verMasSalud = document.querySelectorAll('.salud-vermas');
-
-verMasSalud.forEach(boton => {
-  boton.addEventListener('click', () => {
-    alert("✨ Próximamente verás la receta completa 🍽️");
   });
 });
 
@@ -59,7 +110,7 @@ function Abrirmodal(recetaId) {
           <li>1 cda de miel (opcional)</li>
           <li>Agua (para formar la masa)</li>
         </ul>
-        <img src="imagenes/Pupusas.jpg" alt="pupusas" class="img-modal">
+        <img src="imagenes/pupusasMora.png" alt="pupusas" class="img-modal">
       </div>
       <div class="preparacion">
         <h3>Preparación</h3>
@@ -104,7 +155,7 @@ function Abrirmodal2(recetaId) {
           <li>Sal y pimienta al gusto</li>
           <li>Cilantro fresco y rodajas de tomate</li>
         </ul>
-        <img src="imagenes/PescadoAsado.jpg" alt="Pescado asado" class="img-modal">
+        <img src="imagenes/PescadoAsado.png" alt="Pescado asado" class="img-modal">
       </div>
       <div class="preparacion">
         <h3>Preparación</h3>
@@ -147,7 +198,7 @@ function Abrirmodal3(recetaId) {
           <li>1/4 taza zanahoria rallada</li>
           <li>Jugo de limón, aceite, sal y pimienta</li>
         </ul>
-        <img src="imagenes/Salpicon.jpg" alt="Salpicon de res" class="img-modal">
+        <img src="imagenes/Salpicon.png" alt="Salpicon de res" class="img-modal">
       </div>
       <div class="preparacion">
         <h3>Preparación</h3>
@@ -197,7 +248,7 @@ function Abrirmodal4(recetaId) {
           <li>Agregar pollo y verduras.</li>
           <li>Cerrar y cortar en mitades.</li>
         </ul>
-        <img src="imagenes/SandwichVerduras.jpg" class="img-modal">
+        <img src="imagenes/SandwichVegetales.png" class="img-modal">
       </div>`;
   }
 
@@ -221,7 +272,8 @@ function Abrirmodal5(recetaId) {
   if (recetaId === 'receta-ArrozConLecheDescremada') {
     titulo.textContent = 'Arroz con Leche Descremada';
     cuerpo.innerHTML = `
-      <div class="ingredientes">
+     <div class="ingredientes">
+        <h3>Ingredientes</h3>
         <ul>
           <li>1/2 taza de arroz</li>
           <li>2 tazas de leche descremada</li>
@@ -231,12 +283,13 @@ function Abrirmodal5(recetaId) {
         </ul>
       </div>
       <div class="preparacion">
+        <h3>Preparación</h3>
         <ul>
           <li>Cocinar el arroz con agua y canela.</li>
           <li>Agregar leche y endulzar.</li>
           <li>Cocinar a fuego bajo 10 min.</li>
         </ul>
-        <img src="imagenes/ArrozLecheDescreamada.png" class="img-modal">
+        <img src="imagenes/ArrozLecheDescremada.png" class="img-modal">
       </div>`;
   }
 
@@ -260,13 +313,15 @@ function Abrirmodal6(recetaId) {
     titulo.textContent = 'Plátanos al Vapor';
     cuerpo.innerHTML = `
       <div class="ingredientes">
+        <h3>Ingredientes</h3>
         <ul>
           <li>1 plátano maduro</li>
           <li>Canela al gusto</li>
         </ul>
-        <img src="imagenes/PlatanosVapor.png" class="img-modal">
+        <img src="imagenes/Platano_sancochado.png" class="img-modal">
       </div>
       <div class="preparacion">
+        <h3>Preparación</h3>
         <ul>
           <li>Pelar y cortar el plátano.</li>
           <li>Cocer al vapor 10-12 min.</li>
@@ -294,7 +349,8 @@ function Abrirmodal7(recetaId) {
   if (recetaId === 'receta-Yusancochada') {
     titulo.textContent = 'Yuca Sancochada';
     cuerpo.innerHTML = `
-      <div class="ingredientes">
+       <div class="ingredientes">
+        <h3>Ingredientes</h3>
         <ul>
           <li>1 yuca mediana</li>
           <li>Agua y sal al gusto</li>
@@ -302,6 +358,7 @@ function Abrirmodal7(recetaId) {
         <img src="imagenes/YucaSancochada.png" class="img-modal">
       </div>
       <div class="preparacion">
+        <h3>Preparación</h3>
         <ul>
           <li>Hervir agua con sal.</li>
           <li>Agregar la yuca y cocinar 25 min.</li>
@@ -330,6 +387,7 @@ function Abrirmodal8(recetaId) {
     titulo.textContent = 'Nuegados Horneados';
     cuerpo.innerHTML = `
       <div class="ingredientes">
+        <h3>Ingredientes</h3>
         <ul>
           <li>1 taza de yuca rallada</li>
           <li>1 huevo</li>
@@ -338,7 +396,8 @@ function Abrirmodal8(recetaId) {
           <li>1/4 cdita de canela</li>
         </ul>
       </div>
-      <div class="preparacion">
+       <div class="preparacion">
+        <h3>Preparación</h3>
         <ul>
           <li>Precalentar horno a 180°C.</li>
           <li>Mezclar ingredientes y formar bolitas.</li>
@@ -484,7 +543,7 @@ function Abrirmodal10(recetaId) {
   const cuerpo = document.querySelector('.receta-info10');
 
   if (recetaId === 'receta-morro') {
-    titulo.textContent = 'Receta tamales de elote salvadoreños';
+    titulo.textContent = 'Receta Horchata de morro';
     cuerpo.innerHTML = `
       <div class="ingredientes">
         <h3>Ingredientes</h3>
@@ -590,7 +649,7 @@ function Abrirmodal11(recetaId) {
         </ul>
 
 
-        <img src="imagenes/YucaSancochada.png" alt="Yuca frita" class="img-modal">
+        <img src="imagenes/chanLimón.png" alt="Yuca frita" class="img-modal">
     </div>
 
       </div>

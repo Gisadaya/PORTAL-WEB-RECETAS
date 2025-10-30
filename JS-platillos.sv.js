@@ -130,7 +130,7 @@ function Abrirmodal(recetaId) {
   const titulo = document.querySelector('.titulo-receta');
   const cuerpo = document.querySelector('.receta-info');
 
-  // Ejemplo de contenido del modal (puedes editar o agregar más)
+ 
   if (recetaId === 'receta-pupusas') {
     titulo.textContent = 'Receta de Pupusas Salvadoreñas';
     cuerpo.innerHTML = `

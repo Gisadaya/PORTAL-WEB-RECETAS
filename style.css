@@ -16,7 +16,7 @@ body {
 @media (max-width: 458px) {
     body {
         font-size: 13px; 
-        padding: 0; /* quitar padding para que no sobre espacio */
+        padding: 0; 
         width: 100%;
         overflow-x: hidden;
     }
@@ -189,6 +189,8 @@ header {
   
    
 }
+
+
 
 /* ======= MENÚ PRINCIPAL ======= */
 

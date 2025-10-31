@@ -260,7 +260,7 @@ function Abrirmodal2(recetaId) {
         </ul>
 
 
-                <img src="imagenes/Tamales de pollo.jpg" alt="Tamales de pollo" class="img-modal">
+                <img src="imagenes/Tamales pollo.jpg" alt="Tamales de pollo" class="img-modal">
             </div>
 
       </div>
@@ -589,7 +589,7 @@ function Abrirmodal5(recetaId) {
           <li><b>Paso 3:</b> Sirve caliente, disfrutando de esta reconfortante sopa que combina sabores herbales, 
           vegetales y la ternura de la gallina cocida lentamente. </li>
         </ul>
-        <img src="imagenes/sopa de gallina india.jpg" alt="sopa de gallina india" class="img-modal">
+        <img src="imagenes/Sopa de gallina india.jpg" alt="sopa de gallina india" class="img-modal">
       </div>
     `;
   } else {

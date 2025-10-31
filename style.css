@@ -1,21 +1,26 @@
 
 
-   body {
+  * {
+    box-sizing: border-box;
+}
+
+body {
     margin: 0; 
-    overflow-x:hidden;
-   width: 100%;
-   padding: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
     font-family: Arial, sans-serif; 
-    background-color:#DDAF46; 
+    background-color: #DDAF46; 
 }
 
 @media (max-width: 458px) {
     body {
         font-size: 13px; 
-        padding: 0 5px; 
+        padding: 0; 
+        width: 100%;
+        overflow-x: hidden;
     }
 }
-
 
 header {
     position: absolute; 
@@ -184,6 +189,8 @@ header {
   
    
 }
+
+
 
 /* ======= MENÚ PRINCIPAL ======= */
 
@@ -2024,14 +2031,11 @@ footer p {
 /* === Responsive para celulares === */
 @media (max-width: 600px) {
 
-    /* 1. Contenedor de Acciones (CLAVE para la alineación) */
     .acciones-video {
-        display: flex; /* Habilita el modo flexible (horizontal por defecto) */
-        
-        /* CLAVE: Alinea los elementos (botones) a la derecha */
+        display: flex; 
+      
        justify-content: flex-start; 
         
-        /* Asegura que los botones se centren verticalmente si son de diferente altura */
         align-items: center; 
         
         /* Espacio entre el botón de la izquierda y el de la derecha */

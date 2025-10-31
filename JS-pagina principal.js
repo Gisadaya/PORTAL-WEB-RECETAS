@@ -5,119 +5,100 @@ document.addEventListener('DOMContentLoaded', () => {
   const formLogin = document.getElementById('login-form');
   const registerLink = document.getElementById('register-link');
 
-  // Elementos del registro
   const overlayRegister = document.getElementById('register-overlay');
   const closeRegister = document.getElementById('close-register');
   const formRegister = document.getElementById('register-form');
+  const backLogin = document.getElementById('back-login');
 
-  // Verificar elementos básicos
-  if (!openLogin || !overlayLogin || !closeLogin || !formLogin) {
-    console.warn('Faltan elementos del modal de login.');
-    return;
-  }
+  const btnExplorar = document.querySelector(".btn-hero");
 
-  // === ABRIR LOGIN ===
-  openLogin.addEventListener('click', () => {
-    const saved = localStorage.getItem('foodware_user');
-    if (saved) {
-      const userObj = JSON.parse(saved);
-      if (confirm(`Ya has iniciado sesión como ${userObj.email}.\n¿Deseas cerrar sesión?`)) {
-        cerrarSesion();
+  // ===== MODALES =====
+  function abrirLogin() { overlayLogin.style.display = "flex"; }
+  function cerrarLogin() { overlayLogin.style.display = "none"; }
+  function abrirRegister() { overlayRegister.style.display = "flex"; }
+  function cerrarRegister() { overlayRegister.style.display = "none"; }
+
+  closeLogin.addEventListener("click", cerrarLogin);
+  closeRegister.addEventListener("click", cerrarRegister);
+
+  overlayLogin.addEventListener("click", e => { if(e.target===overlayLogin) cerrarLogin(); });
+  overlayRegister.addEventListener("click", e => { if(e.target===overlayRegister) cerrarRegister(); });
+
+  registerLink.addEventListener("click", e => { e.preventDefault(); cerrarLogin(); abrirRegister(); });
+  backLogin.addEventListener("click", e => { e.preventDefault(); cerrarRegister(); abrirLogin(); });
+
+  openLogin.addEventListener("click", () => {
+    const usuarioRegistrado = localStorage.getItem("usuarioRegistrado");
+    const usuarioLogueado = localStorage.getItem("logueado") === "true";
+
+    if(usuarioRegistrado && usuarioLogueado){
+      if(confirm("Ya has iniciado sesión. ¿Deseas cerrar sesión?")){
+        localStorage.removeItem("logueado");
+        localStorage.removeItem("usuarioRegistrado");
+        localStorage.removeItem("passwordRegistrada");
+        alert("Sesión cerrada correctamente.");
       }
     } else {
-      overlayLogin.style.display = 'flex';
-      const emailInput = document.getElementById('email');
-      if (emailInput) emailInput.focus();
+      abrirLogin();
     }
   });
 
-  // === CERRAR LOGIN ===
-  closeLogin.addEventListener('click', () => (overlayLogin.style.display = 'none'));
-  overlayLogin.addEventListener('click', (e) => {
-    if (e.target === overlayLogin) overlayLogin.style.display = 'none';
-  });
-
-  // === VALIDAR LOGIN ===
-  formLogin.addEventListener('submit', (e) => {
+  // ===== REGISTRO =====
+  formRegister.addEventListener("submit", (e) => {
     e.preventDefault();
-    const email = formLogin.querySelector('#email').value.trim();
-    const password = formLogin.querySelector('#password').value.trim();
+    const email = document.getElementById("reg-email").value.trim();
+    const password = document.getElementById("reg-password").value.trim();
+    const confirm = document.getElementById("reg-confirm").value.trim();
 
-    const savedUser = JSON.parse(localStorage.getItem('foodware_user') || '{}');
-    if (savedUser.email !== email || savedUser.password !== password) {
-      alert('Correo o contraseña incorrectos. Si no tienes cuenta, regístrate.');
+    if(password !== confirm){
+      alert("Las contraseñas no coinciden ❌");
       return;
     }
 
-    actualizarBotonUsuario(email);
-    overlayLogin.style.display = 'none';
-    alert('Inicio de sesión exitoso ✓');
+    localStorage.setItem("usuarioRegistrado", email);
+    localStorage.setItem("passwordRegistrada", password);
+    localStorage.setItem("logueado", "true"); // inicia sesión automáticamente
+    cerrarRegister();
+    alert("Registro exitoso ✅ Ahora puedes explorar las recetas.");
   });
 
-  // === ABRIR REGISTRO ===
-  registerLink.addEventListener('click', (e) => {
+  // ===== LOGIN =====
+  formLogin.addEventListener("submit", (e) => {
     e.preventDefault();
-    overlayLogin.style.display = 'none';
-    overlayRegister.style.display = 'flex';
-    const emailInput = document.getElementById('reg-email');
-    if (emailInput) emailInput.focus();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    const emailReg = localStorage.getItem("usuarioRegistrado");
+    const passReg = localStorage.getItem("passwordRegistrada");
+
+    if(email === emailReg && password === passReg){
+      localStorage.setItem("logueado", "true");
+      cerrarLogin();
+      alert("Inicio de sesión exitoso ✅ Ahora puedes explorar las recetas.");
+    } else {
+      alert("Correo o contraseña incorrectos ❌");
+    }
   });
 
-  // === CERRAR REGISTRO ===
-  closeRegister.addEventListener('click', () => (overlayRegister.style.display = 'none'));
-  overlayRegister.addEventListener('click', (e) => {
-    if (e.target === overlayRegister) overlayRegister.style.display = 'none';
-  });
+  // ===== BOTÓN EXPLORAR RECETAS =====
+  btnExplorar.addEventListener("click", (e) => {
+    const usuarioRegistrado = localStorage.getItem("usuarioRegistrado");
+    const usuarioLogueado = localStorage.getItem("logueado") === "true";
 
-  // === VALIDAR REGISTRO ===
-  formRegister.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = formRegister.querySelector('#reg-email').value.trim();
-    const password = formRegister.querySelector('#reg-password').value.trim();
-    const confirm = formRegister.querySelector('#reg-confirm').value.trim();
-
-    if (!/\S+@\S+\.\S+/.test(email)) {
-      alert('Por favor ingresa un correo válido.');
-      return;
-    }
-    if (password.length < 4) {
-      alert('La contraseña debe tener al menos 4 caracteres.');
-      return;
-    }
-    if (password !== confirm) {
-      alert('Las contraseñas no coinciden.');
+    if(!usuarioRegistrado){
+      e.preventDefault();
+      abrirRegister();
+      alert("Debes crear una cuenta para acceder a las recetas.");
       return;
     }
 
-    const usuario = { email, password, createdAt: new Date().toISOString() };
-    localStorage.setItem('foodware_user', JSON.stringify(usuario));
-
-    overlayRegister.style.display = 'none';
-    actualizarBotonUsuario(email);
-    alert('Registro exitoso ✓ Tu sesión se ha iniciado.');
-  });
-
-  // === FUNCIONES ===
-  function actualizarBotonUsuario(email) {
-    openLogin.innerHTML = `<i class="fas fa-user-circle"></i> ${email}`;
-    openLogin.classList.add('logged');
-  }
-
-  function cerrarSesion() {
-    localStorage.removeItem('foodware_user');
-    openLogin.innerHTML = `<i class="fas fa-sign-in-alt"></i> Iniciar sesión`;
-    openLogin.classList.remove('logged');
-    alert('Sesión cerrada correctamente.');
-  }
-
-  // === REVISAR SESIÓN GUARDADA ===
-  const saved = localStorage.getItem('foodware_user');
-  if (saved) {
-    try {
-      const userObj = JSON.parse(saved);
-      if (userObj && userObj.email) actualizarBotonUsuario(userObj.email);
-    } catch (err) {
-      console.warn('Error al leer usuario guardado:', err);
+    if(!usuarioLogueado){
+      e.preventDefault();
+      abrirLogin();
+      alert("Debes iniciar sesión para acceder a las recetas.");
+      return;
     }
-  }
+
+    // Si pasa ambas condiciones, deja entrar normalmente
+  });
 });
